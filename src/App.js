@@ -14,7 +14,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={SignIn} />
             <Route  path="/admin" component={Admin} />
-            <Route  path="/morqur" component={Manager} />
+            <Route  path="/manager" component={Manager} />
           </Switch>
         </BrowserRouter>
     );

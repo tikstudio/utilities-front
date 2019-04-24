@@ -1,12 +1,16 @@
 import {
     SIGNIN_USERS_REQUEST,
     SIGNIN_USERS_SUCCESS,
-    SIGNIN_USERS_FAIL
+    SIGNIN_USERS_FAIL,
+    SAVE_USERS_REQUEST,
+    SAVE_USERS_SUCCESS,
+    SAVE_USERS_FAIL,
 } from "../actions/index";
 
 const initialState = {
     usersData: {},
     signIn: {},
+    saveUsers: {}
 };
 
 export default function reducer(state = initialState, action) {
@@ -21,6 +25,15 @@ export default function reducer(state = initialState, action) {
         }
 
         case SIGNIN_USERS_FAIL: {
+            return {...state, usersData: {}}
+        }
+        case SAVE_USERS_REQUEST:{
+            return {...state,saveUsers:{}}
+        }
+        case SAVE_USERS_SUCCESS:{
+            return {...state,usersData: action.payload.data}
+        }
+        case SAVE_USERS_FAIL: {
             return {...state, usersData: {}}
         }
 

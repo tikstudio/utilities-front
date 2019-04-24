@@ -4,7 +4,7 @@ class Manager extends Component {
     render() {
         return (
             <div>
-                <h2>Morqur</h2>
+                <h2>Manager</h2>
             </div>
         );
     }
