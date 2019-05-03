@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {signIn} from "../store/actions";
+import {signIn} from "../store/actions/user";
 import {connect} from "react-redux";
 
 class SignIn extends Component {
@@ -26,8 +26,6 @@ class SignIn extends Component {
 
 
     render() {
-
-
 
         return (
             <div className='container' >

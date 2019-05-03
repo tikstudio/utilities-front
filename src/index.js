@@ -10,6 +10,7 @@ import reducers from './store/reducers';
 
 import createSagaMiddleware from 'redux-saga';
 import sagas from './store/sagas';
+import './Assets/stylus/manager.css'
 
 
 const sagaMiddleware = createSagaMiddleware();

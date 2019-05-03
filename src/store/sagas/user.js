@@ -1,23 +1,16 @@
 import {takeLatest, call, put} from 'redux-saga/effects'
 import * as api from '../../api';
 
-import {
-
-    SIGNIN_USERS_REQUEST,
-    SIGNIN_USERS_SUCCESS,
-    SIGNIN_USERS_FAIL,
-} from "../actions";
-
+import {SIGNIN_USERS_REQUEST, SIGNIN_USERS_SUCCESS, SIGNIN_USERS_FAIL,} from "../actions/user";
 
 
 function* requestSignIn(action) {
     try {
-        const log = yield call(api.signIn, action.payload.data);
-        console.log(log);
+        const data = yield call(api.signIn, action.payload.data);
 
         yield put({
             type: SIGNIN_USERS_SUCCESS,
-            payload: {log}
+            payload: {data}
         });
     } catch (e) {
         yield put({

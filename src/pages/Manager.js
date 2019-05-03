@@ -1,25 +1,17 @@
 import React, {Component} from 'react';
-import data from '../data'
+// import data from '../data'
+import {manager} from "../store/actions/manager";
+import {connect} from "react-redux";
 
 class Manager extends Component {
     constructor(props) {
         super(props);
         this.state = {
             name: null,
-            surname: null,
+            lName: null,
             mName: null,
-            peoples: null
+            peoples: this.props.peoples
         }
-    }
-
-    handleClick = () => {
-
-        // const {name, surname, mName} = this.state;
-        // const peoples = data.filter((value) => {
-        //     return (value.name === name || name === null) && (value.surname === surname || surname === null) && (value.mName === mName || mName === null) ? true : false
-        // })
-        // console.log(peoples)
-        // this.setState({peoples})
     }
 
     inputs = (e, input) => {
@@ -28,8 +20,8 @@ class Manager extends Component {
             case 'name':
                 this.setState({name: value});
                 break;
-            case 'surname':
-                this.setState({surname: value});
+            case 'lName':
+                this.setState({lName: value});
                 break;
             case 'mName':
                 this.setState({mName: value});
@@ -39,36 +31,52 @@ class Manager extends Component {
         }
     };
 
+
+    send = () => {
+        this.props.manager(this.state)
+    };
+
     render() {
-        const {peoples} = this.state;
+        console.log(this.props.peoples);
+        // {
+        //     const people =  data.map((value) => {
+        //         if (this.state.name !== null && this.state.surname !== null && this.state.mName !== null){
+        //             if (this.state.name === value.name && this.state.surname === value.surname && this.state.mName === value.mName) {
+        //                 return true
+        //             } else {
+        //                 return false
+        //             }
+        //         }
+        //
+        //     })
+        //
+        // }
         return (
-            <div>
-                <h2>Manager</h2>
-                <br/>
-                <input type="text" onBlur={(e) => this.inputs(e, 'name')} placeholder="name"/>
-                <br/>
-                <input type="text" onBlur={(e) => this.inputs(e, 'surname')} placeholder="surname"/>
-                <br/>
-                <input type="text" onBlur={(e) => this.inputs(e, 'mName')} placeholder="mName"/>
-                <br/>
-                <button onClick={this.handleClick}>save</button>
-                {peoples ?
-                    <table>
-                        <tbody>
-                        {peoples.map((value)=>(
-                        <tr>
-                            <td>{value.name}</td>
-                            <td>{value.surname}</td>
-                            <td>{value.mName}</td>
-                            <td>{value.address}</td>
-                        </tr>
-                        ))}
-                        </tbody>
-                    </table>
-                    : null}
-            </div>
+          <div>
+              <h2>Manager</h2>
+              <br/>
+              <input type="text" onBlur={(e) => this.inputs(e, 'name')} placeholder="name"/>
+              <br/>
+              <input type="text" onBlur={(e) => this.inputs(e, 'lName')} placeholder="lName"/>
+              <br/>
+              <input type="text" onBlur={(e) => this.inputs(e, 'mName')} placeholder="mName"/>
+              <br/>
+              <button onClick={this.send}>save</button>
+          </div>
         );
     }
 }
+const mapStateToProps = (state) => ({
+    peoples: state.manager.peoples,
+});
 
-export default Manager;
+const mapDispatchToProps = {
+    manager,
+};
+
+const ManagerContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Manager);
+
+export default ManagerContainer;
