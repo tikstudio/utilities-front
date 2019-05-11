@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {saveUsers} from "../store/actions";
+import {saveUsers} from "../store/actions/save";
 import {connect} from "react-redux";
 
 class Admin extends Component {
