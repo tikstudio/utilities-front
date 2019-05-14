@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import {signIn} from "../store/actions";
 import {connect} from "react-redux";
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+
 
 class SignIn extends Component {
     constructor(props) {
@@ -20,28 +23,39 @@ class SignIn extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        // console.log(this.state);
-        this.props.signIn(this.state)
+        console.log(this.state);
+        // this.props.signIn(this.state)
     };
 
 
     render() {
 
 
-
         return (
             <div className='container' >
                 <form onSubmit={this.handleSubmit}>
+                    <TextField
+                        id="login"
+                        label="Enter your login"
+                        placeholder="login"
+                        margin="normal"
+                        onChange={this.handleChange}
+                    />
+                    <br/>
+                    <TextField
+                        id="password"
+                        label="Password"
+                        type="password"
+                        autoComplete="current-password"
+                        margin="normal"
+                        onChange={this.handleChange}
+                    />
+
+
                     <div>
-                        <label htmlFor='login'>login</label>
-                        <input type="text" id='login' onChange={this.handleChange}/>
-                    </div>
-                    <div>
-                        <label htmlFor='password'>password</label>
-                        <input type="text" id='password' onChange={this.handleChange}/>
-                    </div>
-                    <div>
-                       <button>LogIn</button>
+                        <Button onClick={this.handleSubmit} variant="contained" color="primary" >
+                            Sign In
+                        </Button>
                     </div>
                 </form>
             </div>

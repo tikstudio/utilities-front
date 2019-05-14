@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {saveUsers} from "../store/actions/save";
 import {connect} from "react-redux";
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 class Admin extends Component {
     constructor(props) {
@@ -26,7 +28,7 @@ class Admin extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         console.log(this.state);
-        this.props.saveUsers(this.state)
+        // this.props.saveUsers(this.state)
     };
 
 
@@ -37,37 +39,53 @@ class Admin extends Component {
         return (
             <div className='container' >
                 <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <label htmlFor='uName'>User Name</label>
-                        <input type="text" id='uName' onChange={this.handleChange}/>
-                    </div>
-                    <div>
-                        <label htmlFor='lName'>Last Name</label>
-                        <input type="text" id='lName' onChange={this.handleChange}/>
-                    </div>
-                    <div>
-                        <label htmlFor='mName'>Middle Name</label>
-                        <input type="text" id='mName' onChange={this.handleChange}/>
-                    </div>
-                    <div>
-                        <label htmlFor='address'>Address</label>
-                        <input type="text" id='address' onChange={this.handleChange}/>
-                    </div>
-                    <div>
-                        <label htmlFor='passport'>Passport</label>
-                        <input type="text" id='passport' onChange={this.handleChange}/>
-                    </div>
-                    <div>
-                        <label htmlFor='phone'>Phone Number</label>
-                        <input type="text" id='phone' onChange={this.handleChange}/>
-                    </div>
-                    <div>
-                        <label htmlFor='code'>Code</label>
-                        <input type="text" id='code' onChange={this.handleChange}/>
-                    </div>
+                    <TextField
+                        id="uName"
+                        label="User Name"
+                        margin="normal"
+                        onChange={this.handleChange}
+                    />
 
+                    <TextField
+                        id="lName"
+                        label="Last Name"
+                        margin="normal"
+                        onChange={this.handleChange}
+                    />
+                    <TextField
+                        id="mName"
+                        label="Middle Name"
+                        margin="normal"
+                        onChange={this.handleChange}
+                    />
+                    <TextField
+                        id="address"
+                        label="Address"
+                        margin="normal"
+                        onChange={this.handleChange}
+                    />
+                    <TextField
+                        id="passport"
+                        label="Passport"
+                        margin="normal"
+                        onChange={this.handleChange}
+                    />
+                    <TextField
+                        id="phone"
+                        label="Phone Number"
+                        margin="normal"
+                        onChange={this.handleChange}
+                    />
+                    <TextField
+                        id="code"
+                        label="Code"
+                        margin="normal"
+                        onChange={this.handleChange}
+                    />
                     <div>
-                        <button>Save</button>
+                        <Button onClick={this.handleSubmit} variant="contained" color="primary" >
+                            Sign In
+                        </Button>
                     </div>
                 </form>
             </div>
