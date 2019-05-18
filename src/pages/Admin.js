@@ -3,7 +3,7 @@ import {saveUsers} from "../store/actions/save";
 import {connect} from "react-redux";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-
+import '../Assets/styles/style.css'
 class Admin extends Component {
     constructor(props) {
         super(props);
@@ -45,37 +45,42 @@ class Admin extends Component {
                         margin="normal"
                         onChange={this.handleChange}
                     />
-
+                    <br/>
                     <TextField
                         id="lName"
                         label="Last Name"
                         margin="normal"
                         onChange={this.handleChange}
-                    />
+                    />                    <br/>
+
                     <TextField
                         id="mName"
                         label="Middle Name"
                         margin="normal"
                         onChange={this.handleChange}
-                    />
+                    />                    <br/>
+
                     <TextField
                         id="address"
                         label="Address"
                         margin="normal"
                         onChange={this.handleChange}
-                    />
+                    />                    <br/>
+
                     <TextField
                         id="passport"
                         label="Passport"
                         margin="normal"
                         onChange={this.handleChange}
-                    />
+                    />                    <br/>
+
                     <TextField
                         id="phone"
                         label="Phone Number"
                         margin="normal"
                         onChange={this.handleChange}
-                    />
+                    />                    <br/>
+
                     <TextField
                         id="code"
                         label="Code"
