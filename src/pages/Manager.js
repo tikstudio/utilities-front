@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {manager} from "../store/actions/manager";
 import {connect} from "react-redux";
 import TextField from '@material-ui/core/TextField';
+import {Link} from "react-router-dom";
+import Helmet from "react-helmet"
 
 class Manager extends Component {
     constructor(props) {
@@ -30,17 +32,20 @@ class Manager extends Component {
                 break
         }
     };
-
-
     send = () => {
         this.props.manager(this.state)
     };
-
     render() {
-        console.log(this.props.peoples);
+        const array = [];
+        array.push(this.props.peoples);
+        console.log(array);
         return (
             <div className='background'>
+                <Helmet>
+                    <title>Manager</title>
+                </Helmet>
                 <h2 className="manager">Manager</h2>
+                <h3 className="peo">peoples</h3>
                 <br/>
                 <div className='inputs'>
                     <label htmlFor="uName">Name</label>
@@ -60,11 +65,31 @@ class Manager extends Component {
                     <TextField type='text' id="mName" onBlur={(e) => this.inputs(e, 'mName')} placeholder="mName"/>
                 </div>
                 <br/>
-                <button className="button"  onClick={this.send}>
+                <button className="button" onClick={this.send}>
                     send
-                    <div className="button__horizontal"/>
-                    <div className="button__vertical"/>
                 </button>
+                <table className="flat-table flat-table-1">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>L_Name</th>
+                        <th>M_Name</th>
+                        <th>To Pay</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    { array.map((value, index) => (
+                        <tr key={index}>
+                            <td>{value.name}</td>
+                            <td>{value.lName}</td>
+                            <td>{value.mName}</td>
+                            <td>
+                                <button className="butpay"><Link to="/paymanager" style={{textDecoration: 'none',}}>Pay</Link></button>
+                            </td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
             </div>
         );
     }
