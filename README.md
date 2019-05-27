@@ -6,6 +6,6 @@ to install yarn modules use `
 
 in yarn do not need to write --save it happens automatically
 
-to run project use ### `npm start`
+to run project use
 ### `npm start`
 
