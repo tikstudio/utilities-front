@@ -1,11 +1,11 @@
-import { all, fork } from "redux-saga/effects";
-import user from "./user";
-import saveUsers from "./saveUsers";
+import { all, fork } from 'redux-saga/effects';
+import user from './users';
+import types from './types';
 
 export default function* root() {
-    const sagas = [
-        user,
-        saveUsers
-    ];
-    yield all(sagas.map(fork));
+  const sagas = [
+    user,
+    types,
+  ];
+  yield all(sagas.map(fork));
 }

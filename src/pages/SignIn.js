@@ -1,86 +1,73 @@
 import React, { Component } from 'react';
-import { signIn } from "../store/actions";
-import { connect } from "react-redux";
-import {Button, TextField} from '@material-ui/core';
-import { getPeoples } from "../api";
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { Button } from '@material-ui/core';
+import { Field, reduxForm } from 'redux-form';
+import { Redirect } from 'react-router-dom';
+import { login } from '../store/actions/users';
+import Input from '../components/form/Input';
+import Auth from "../helpers/Auth";
 
 
 class SignIn extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: '',
-      password: ''
-    };
+  static propTypes = {
+    login: PropTypes.func.isRequired,
+    handleSubmit: PropTypes.func.isRequired,
+    submitting: PropTypes.bool.isRequired,
+    authError: PropTypes.string,
   }
 
-  handleChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value
-    })
-
-  };
-
-  componentDidMount() {
-
+  static defaultProps = {
+    authError: '',
   }
 
-
-  handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(this.state);
-    this.props.signIn(this.state)
-  };
-
+  handleSubmit = (values) => {
+    this.props.login(values);
+  }
 
   render() {
-
-
+    const { handleSubmit, submitting, authError } = this.props;
+    if (Auth.getToken()) {
+      return <Redirect to="/" />;
+    }
     return (
-      <div className='container'>
-        <form onSubmit={this.handleSubmit}>
-          <TextField
+      <div className="signIn">
+        {authError ? <div>{authError}</div> : null}
+        <form onSubmit={handleSubmit(this.handleSubmit)}>
+          <Field
             name="username"
-            label="Enter your login"
-            placeholder="login"
-            margin="normal"
-            onChange={this.handleChange}
+            label="Login"
+            component={Input}
           />
-          <br/>
-          <TextField
+          <Field
             name="password"
-            label="Password"
             type="password"
-            autoComplete="current-password"
-            margin="normal"
-            onChange={this.handleChange}
+            label="Password"
+            component={Input}
           />
-
-
-          <div>
-            <Button onClick={this.handleSubmit} variant="contained" color="primary">
-              Sign In
-            </Button>
-          </div>
+          <Button type="submit" disabled={submitting} variant="contained" color="primary">
+            Sign In
+          </Button>
         </form>
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => ({
-  usersData: state.usersData,
+const mapStateToProps = state => ({
+  authError: state.users.authError,
+  user: state.users.user,
 });
 
 const mapDispatchToProps = {
-  signIn,
+  login,
 };
 
-const SignInContainer = connect(
+const Container = connect(
   mapStateToProps,
   mapDispatchToProps,
 )(SignIn);
 
-export default SignInContainer;
-
-
+export default reduxForm({
+  form: 'login',
+})(Container);

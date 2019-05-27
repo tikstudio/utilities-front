@@ -1,0 +1,36 @@
+$red: #f44336;
+$white: #fff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.signIn {
+  margin: auto;
+  width: 320px;
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    input {
+      width: 100%;
+    }
+  }
+
+}
+
+body {
+  .bg-red {
+    background-color: $red;
+  }
+
+  .white {
+    color: $white;
+  }
+}
+
+
