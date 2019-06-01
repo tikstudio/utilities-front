@@ -2,25 +2,65 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67d9f1f3-58d5-4186-9ad3-42ce1f679c68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/styles/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Info.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/css/addons/datatables-select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/css/addons/datatables-select.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/css/addons/datatables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/css/addons/datatables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/css/addons/directives.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/css/addons/directives.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/css/mdb.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/css/mdb.lite.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/css/mdb.lite.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/css/mdb.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/css/modules/animations-extended.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/css/modules/animations-extended.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/css/style.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Bold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Light.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Light.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Light.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Medium.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Medium.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Medium.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Thin.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Thin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Thin.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/font/roboto/Roboto-Thin.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/img/flags.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/img/lightbox/default-skin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/img/lightbox/default-skin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/img/lightbox/preloader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/img/overlays/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/img/overlays/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/img/overlays/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/img/overlays/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/img/overlays/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/img/overlays/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/img/overlays/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/img/overlays/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/img/overlays/09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/img/sample.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/img/svg/arrow_left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/img/svg/arrow_right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/styles/img/svg/flags.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/styles/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apies/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apies/saveUsersApi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Wrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Wrapper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SignIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/save.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/save.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/sagas/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/sagas/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/sagas/saveUsers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/sagas/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/sagas/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,34 +73,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/styles/css/addons/datatables.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/api.js">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="319">
+              <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/helpers/Cache.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/sagas/users.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="39" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#59#0" expanded="true" />
+                <element signature="e#769#809#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,7 +93,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/helpers/Auth.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="238">
               <caret line="13" selection-start-line="13" selection-end-line="18" />
             </state>
           </provider>
@@ -78,7 +102,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/SignIn.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
+            <state relative-caret-position="27">
               <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -90,11 +114,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Wrapper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="794">
-              <caret line="198" column="6" lean-forward="true" selection-start-line="198" selection-start-column="6" selection-end-line="198" selection-end-column="6" />
+            <state relative-caret-position="28917">
+              <caret line="1071" column="109" selection-start-line="1071" selection-start-column="109" selection-end-line="1071" selection-end-column="109" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/styles/css/bootstrap.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -102,21 +135,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/actions/types.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="135">
               <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/actions/users.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/sagas/types.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="297">
               <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
@@ -128,7 +156,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Navigator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="1431">
               <caret line="69" selection-start-line="69" selection-end-line="70" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -163,9 +191,19 @@
       <find>textDense</find>
       <find>clsx</find>
       <find>fetchTypes</find>
+      <find>href</find>
+      <find>a</find>
+      <find>iframe</find>
+      <find>Link className</find>
+      <find>Link role</find>
+      <find>link</find>
     </findStrings>
     <replaceStrings>
       <replace>LOGIN</replace>
+      <replace>to</replace>
+      <replace>Link to=&quot;#&quot; className</replace>
+      <replace>Link to=&quot;#&quot; role</replace>
+      <replace>Link</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -180,10 +218,8 @@
         <option value="$PROJECT_DIR$/src/components/form/Input.js" />
         <option value="$PROJECT_DIR$/src/store/actions/users.js" />
         <option value="$PROJECT_DIR$/.eslintrc.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/assets/styles/style.css" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/src/assets/styles/style.scss" />
         <option value="$PROJECT_DIR$/src/components/Alert.js" />
         <option value="$PROJECT_DIR$/src/components/Info.js" />
         <option value="$PROJECT_DIR$/src/helpers/Auth.js" />
@@ -197,108 +233,93 @@
         <option value="$PROJECT_DIR$/src/store/reducers/users.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/types.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Wrapper.js" />
         <option value="$PROJECT_DIR$/src/components/Navigator.js" />
         <option value="$PROJECT_DIR$/src/helpers/chache.js" />
         <option value="$PROJECT_DIR$/src/store/sagas/users.js" />
         <option value="$PROJECT_DIR$/src/store/sagas/types.js" />
         <option value="$PROJECT_DIR$/src/helpers/Cache.js" />
         <option value="$PROJECT_DIR$/src/api.js" />
+        <option value="$PROJECT_DIR$/src/assets/styles/style.scss" />
+        <option value="$PROJECT_DIR$/src/components/Wrapper.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
       </list>
     </option>
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="218" />
-    <option name="y" value="84" />
+    <option name="x" value="300" />
+    <option name="y" value="27" />
     <option name="width" value="899" />
     <option name="height" value="519" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
+      <pane id="ProjectPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
-              <item name="utilities-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="utilities-front" type="462c0819:PsiDirectoryNode" />
+              <item name="utilities-front" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Desktop/utilities-front" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
             <path>
-              <item name="utilities-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="utilities-front" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="utilities-front" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Desktop/utilities-front" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="utilities-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="utilities-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utilities-front" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Desktop/utilities-front" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="utilities-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="utilities-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="apies" type="462c0819:PsiDirectoryNode" />
+              <item name="utilities-front" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Desktop/utilities-front" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="styles" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="utilities-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="utilities-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="utilities-front" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Desktop/utilities-front" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="styles" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="css" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="utilities-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="utilities-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
+              <item name="utilities-front" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Desktop/utilities-front" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="styles" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="font" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="utilities-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="utilities-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="utilities-front" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Desktop/utilities-front" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="styles" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="img" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="utilities-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="utilities-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="utilities-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="utilities-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="utilities-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="utilities-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="utilities-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="utilities-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="utilities-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="utilities-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="utilities-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="utilities-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="sagas" type="462c0819:PsiDirectoryNode" />
+              <item name="utilities-front" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Desktop/utilities-front" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="styles" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="img" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="overlays" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -307,20 +328,23 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/store/reducers" />
+    <property name="javascript.nodejs.core.library.configured.version" value="8.10.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/styles" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/styles" />
       <recent name="$PROJECT_DIR$/src/store/reducers" />
       <recent name="$PROJECT_DIR$/src/store/actions" />
     </key>
@@ -351,11 +375,13 @@
       <workItem from="1558876947414" duration="24000" />
       <workItem from="1558968135532" duration="3095000" />
       <workItem from="1558971271984" duration="6305000" />
+      <workItem from="1559336888459" duration="1357000" />
+      <workItem from="1559371863377" duration="2527000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11872000" />
+    <option name="totallyTimeSpent" value="15756000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -367,10 +393,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="51" y="24" width="1229" height="696" extended-state="6" />
-    <editor active="true" />
+    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24917218" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2484326" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -385,7 +410,8 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32867134" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3269565" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.325" />
+      <window_info anchor="bottom" id="GraphQL" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -445,23 +471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/styles/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -559,27 +568,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/helpers/Auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/axios/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="111" column="2" selection-start-line="111" selection-start-column="2" selection-end-line="111" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/sagas/types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -590,9 +582,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helpers/Cache.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/sagas/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state>
           <caret line="24" column="39" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="39" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
@@ -600,39 +606,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/types.js">
+    <entry file="file://$PROJECT_DIR$/src/assets/styles/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        <state relative-caret-position="1701">
+          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store/actions/users.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/SignIn.js">
+    <entry file="file://$PROJECT_DIR$/src/store/sagas/types.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+        <state relative-caret-position="297">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Wrapper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="794">
-          <caret line="198" column="6" lean-forward="true" selection-start-line="198" selection-start-column="6" selection-end-line="198" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Navigator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="1431">
           <caret line="69" selection-start-line="69" selection-end-line="70" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -640,19 +636,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/helpers/Cache.js">
+    <entry file="file://$PROJECT_DIR$/src/store/actions/types.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        <state relative-caret-position="135">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api.js">
+    <entry file="file://$PROJECT_DIR$/src/assets/styles/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="162">
+          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Wrapper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28917">
+          <caret line="1071" column="109" selection-start-line="1071" selection-start-column="109" selection-end-line="1071" selection-end-column="109" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/SignIn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helpers/Auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="13" selection-start-line="13" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/styles/css/addons/datatables.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/styles/css/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/styles/img/overlays/01.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+          <folding>
+            <element signature="e#769#809#0" expanded="true" />
           </folding>
         </state>
       </provider>
