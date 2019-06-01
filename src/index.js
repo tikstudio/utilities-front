@@ -16,10 +16,8 @@ import './assets/styles/css/mdb.min.css';
 import './assets/styles/css/style.css';
 import './assets/styles/css/style.min.css';
 import './assets/styles/img/overlays/01.png'
-// import
-//
-//
-// import './assets/styles/style.scss';
+
+import './assets/styles/style.scss';
 
 import reducers from './store/reducers';
 

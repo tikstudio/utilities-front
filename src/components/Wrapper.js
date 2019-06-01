@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-
+// import Header from './Header'
 class Wrapper extends Component {
     render() {
         return (
@@ -130,8 +130,8 @@ class Wrapper extends Component {
               <div className="card">
               {/*Card content*/}
               <div className="card-body">
-              <canvas id="myChart" />
-              </div>
+             {this.props.children}
+            </div>
               </div>
           {/*/.Card*/}
         </div>

@@ -29,7 +29,7 @@ class Admin extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(this.state);
-    // this.props.saveUsers(this.state)
+    this.props.fetchTypes(this.state)
   };
 
 
