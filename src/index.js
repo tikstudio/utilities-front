@@ -7,14 +7,10 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import './assets/styles/css/modules/animations-extended.css';
-import './assets/styles/css/modules/animations-extended.min.css';
 import './assets/styles/css/bootstrap.css';
-import './assets/styles/css/bootstrap.min.css';
 import './assets/styles/css/mdb.css';
 import './assets/styles/css/mdb.lite.css';
-import './assets/styles/css/mdb.min.css';
 import './assets/styles/css/style.css';
-import './assets/styles/css/style.min.css';
 import './assets/styles/img/overlays/01.png'
 
 import './assets/styles/style.scss';

@@ -37,7 +37,6 @@ class Admin extends Component {
     return (
       <Wrapper title="Main">
         <form onSubmit={this.handleSubmit}>
-          <Link to="/log-out">Log Out</Link>
           <TextField
             id="uName"
             label="User Name"
