@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import Auth from "../helpers/Auth";
 import Wrapper from "../components/Wrapper";
-import { Link } from "react-router-dom";
+
 
 class Admin extends Component {
   constructor(props) {
@@ -29,7 +28,7 @@ class Admin extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(this.state);
-    this.props.fetchTypes(this.state)
+    // this.props.fetchTypes(this.state)
   };
 
 
@@ -97,7 +96,7 @@ class Admin extends Component {
           />
           <div>
             <Button onClick={this.handleSubmit} variant="contained" color="primary">
-              Sign In
+                check in
             </Button>
           </div>
         </form>

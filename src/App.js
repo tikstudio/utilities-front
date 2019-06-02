@@ -4,6 +4,9 @@ import SignIn from './pages/SignIn';
 import Admin from './pages/Admin';
 import Manager from './pages/Manager';
 import LogOut from './pages/LogOut';
+import Peoples from './pages/Peoples';
+import Comunals from './pages/Comunals';
+
 
 
 class App extends Component {
@@ -14,6 +17,8 @@ class App extends Component {
           <Route path="/login" component={SignIn} />
           <Route path="/log-out" component={LogOut} />
           <Route path="/manager" component={Manager} />
+          <Route path="/peoples" component={Peoples} />
+          <Route path="/comunals" component={Comunals} />
           <Route component={Admin} />
         </Switch>
       </BrowserRouter>
