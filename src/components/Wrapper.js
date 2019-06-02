@@ -1,16 +1,15 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
+import { Link,Redirect } from 'react-router-dom';
+import Auth from '../helpers/Auth';
 // import Header from './Header'
+
 class Wrapper extends Component {
     render() {
+        if (!Auth.getToken()) {
+            return <Redirect to="/login" />;
+        }
         return (
-
-
-
               <div>
-              <meta charSet="utf-8" />
-              <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-              <meta httpEquiv="x-ua-compatible" content="ie=edge" />
               <title>Material Design Bootstrap</title>
           {/* Font Awesome */}
         <Link rel="stylesheet" to="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
