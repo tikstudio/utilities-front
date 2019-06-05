@@ -23,10 +23,8 @@ export function login(data) {
   });
 }
 
-export function getPeoples(page) {
-  const query = qs({
-    page,
-  });
+export function getPeoples(data) {
+  const query = qs(data);
   return axios.get(`/peoples?${query}`);
 }
 

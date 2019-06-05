@@ -33,6 +33,8 @@ class Admin extends Component {
 
 
   render() {
+    console.log(this.props)
+
     return (
       <Wrapper title="Main">
         <form onSubmit={this.handleSubmit}>
