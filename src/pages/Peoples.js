@@ -2,28 +2,44 @@ import React, {Component} from 'react';
 import Wrapper from '../components/Wrapper'
 import { connect } from 'react-redux';
 import { getPeoples } from '../store/actions/peoples';
+import _ from 'lodash';
 
 class Peoples extends Component {
-    componentDidMount() {
-        this.props.getPeoples();
+    componentDidMount(data) {
+        this.props.getPeoples(data);
     }
     render() {
-        const peoples = this.props.peoples;
-        console.log(peoples);
-        // const poeplesInfo = peoples.map(key,val) => console.log(key);
-        // const doubled = numbers.map((number) => number * 2);
-        // const listItems =
+        const obj = [
+            { 'id':1455},
+            { 'id':454}
+        ]
+        const object = _.map(obj, 'id');
+        console.log(object);
+          const people = this.props.peoples;
+
 
         return (
             <Wrapper>
-                // {peoples.map((id) => <li>{id[0]}</li>)}
+                {people.map(
+                    function(object, i){
+                        return <table  key={i}>
+                            <tbody>
+                                <tr  className={"row"} key={i}>
+                                    <td>{object.id}</td> ,
+                                    <td key={i}>{object.m_name}</td>,
+                                    <td>{object.name}</td>
+
+                         </tr>
+                            </tbody>
+                            </table>;
+                    })}
             </Wrapper>
     )
         ;
     }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
     peoples: state.peoples.peoples,
 });
 const mapDispatchToProps = {
