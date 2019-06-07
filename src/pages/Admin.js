@@ -1,107 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
 import Wrapper from "../components/Wrapper";
-
+import PieChart from 'react-minimal-pie-chart';
 
 class Admin extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      uName: '',
-      lName: '',
-      mName: '',
-      address: '',
-      passport: '',
-      phone: '',
-      code: '',
-    };
-  }
-
-  handleChange = (e) => {
-    this.setState({
-      [e.target.id]: e.target.value,
-    });
-  };
-
-  handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(this.state);
-    // this.props.fetchTypes(this.state)
-  };
-
 
   render() {
-    console.log(this.props)
-
     return (
       <Wrapper title="Main">
-        <form onSubmit={this.handleSubmit}>
-          <TextField
-            id="uName"
-            label="User Name"
-            margin="normal"
-            onChange={this.handleChange}
-          />
-          <br/>
-          <TextField
-            id="lName"
-            label="Last Name"
-            margin="normal"
-            onChange={this.handleChange}
-          />
-          {' '}
-          <br/>
-
-          <TextField
-            id="mName"
-            label="Middle Name"
-            margin="normal"
-            onChange={this.handleChange}
-          />
-          {' '}
-          <br/>
-
-          <TextField
-            id="address"
-            label="Address"
-            margin="normal"
-            onChange={this.handleChange}
-          />
-          {' '}
-          <br/>
-
-          <TextField
-            id="passport"
-            label="Passport"
-            margin="normal"
-            onChange={this.handleChange}
-          />
-          {' '}
-          <br/>
-
-          <TextField
-            id="phone"
-            label="Phone Number"
-            margin="normal"
-            onChange={this.handleChange}
-          />
-          {' '}
-          <br/>
-
-          <TextField
-            id="code"
-            label="Code"
-            margin="normal"
-            onChange={this.handleChange}
-          />
-          <div>
-            <Button onClick={this.handleSubmit} variant="contained" color="primary">
-                check in
-            </Button>
-          </div>
-        </form>
+        <PieChart
+            data={[
+                { title: 'One', value: 10, color: '#E38627' },
+                { title: 'Two', value: 15, color: '#C13C37' },
+                { title: 'Three', value: 20, color: '#6A2135' },
+          ]}
+        />;
       </Wrapper>
     );
   }

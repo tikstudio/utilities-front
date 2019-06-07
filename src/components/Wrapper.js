@@ -5,7 +5,14 @@ import Header from './Header'
 import Menu from './Menu'
 
 class Wrapper extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+           url:['Peoples','Dashboard','Comunals']
+        };
+    }
     render() {
+
         if (!Auth.getToken()) {
         return <Redirect to="/login" />;
         }
@@ -20,7 +27,7 @@ class Wrapper extends Component {
                             <h4 className="mb-2 mb-sm-0 pt-1">
                             <Link to="/" target="_blank">Home Page</Link>
                             <>/</>
-                            <>Dashboard</>
+                            <>{this.state.url[1]}</>
                             </h4>
                         </div>
                     </div>
