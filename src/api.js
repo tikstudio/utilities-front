@@ -27,6 +27,18 @@ export function getPeoples(data) {
   const query = qs(data);
   return axios.get(`/peoples?${query}`);
 }
+export function registrationPeople(data) {
+  return axios.put(`/peoples`,{
+    name:data.name,
+    l_name:data.l_name,
+    m_name:data.m_name,
+    phone:data.phone,
+    passport:data.passport,
+    region_id:data.region_id,
+    address:data.address,
+    deleted:data.deleted,
+  });
+}
 
 export function getTypes() {
   const url = '/types';

@@ -7,6 +7,7 @@ import LogOut from './pages/LogOut';
 import Peoples from './pages/Peoples';
 import Comunals from './pages/Comunals';
 import Registration from './pages/Registration';
+import Edit from './pages/Edit';
 
 
 
@@ -21,6 +22,7 @@ class App extends Component {
           <Route path="/peoples" component={Peoples} />
           <Route path="/comunals" component={Comunals} />
           <Route path="/registration" component={Registration} />
+          <Route path="/edit" component={Edit} />
           <Route component={Admin} />
         </Switch>
       </BrowserRouter>

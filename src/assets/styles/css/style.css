@@ -41,7 +41,6 @@ table td {
   text-align: center;
   cursor: pointer;
 }
-PieChart{
-  width: 50px;
-  height: 50px;
+.TextField{
+  display: block;
 }

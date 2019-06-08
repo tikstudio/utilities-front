@@ -3,10 +3,12 @@ import { reducer as form } from 'redux-form';
 import users from './users';
 import types from './types';
 import peoples from './peoples';
+import registration from './registration';
 
 export default combineReducers({
   form,
   users,
   types,
   peoples,
+  registration,
 });

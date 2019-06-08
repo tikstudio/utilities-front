@@ -1,20 +1,24 @@
 import React, {Component} from 'react';
-import { connect } from 'react-redux';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Wrapper from "../components/Wrapper";
+import { connect } from 'react-redux';
+import { registrationPeople } from '../store/actions/registration';
 
 class Registration extends Component {
+    componentWillMount(data) {
+        this.props.registrationPeople(data);
+    }
     constructor(props) {
         super(props);
         this.state = {
-            uName: '',
-            lName: '',
-            mName: '',
+            name: '',
+            l_name: '',
+            m_name: '',
             address: '',
             passport: '',
             phone: '',
-            code: '',
+            region_id: '',
         };
     }
 
@@ -27,87 +31,86 @@ handleChange = (e) => {
 handleSubmit = (e) => {
     e.preventDefault();
     console.log(this.state);
-    // this.props.fetchTypes(this.state)
-};
-
-
+    this.props.registrationPeople(this.state);
+    };
 render() {
-    console.log(this.props)
-
     return (
         <Wrapper title="Main">
-        <form onSubmit={this.handleSubmit}>
-        <TextField
-            id="uName"
-            label="User Name"
+            <form onSubmit={this.handleSubmit}>
+                <TextField
+                    id="name"
+                    label="User Name"
+                    margin="normal"
+                    onChange={this.handleChange}
+                    />
+                    <br/>
+                    <TextField
+                    id="l_name"
+                    label="Last Name"
+                    margin="normal"
+                    onChange={this.handleChange}
+                 />
+                    {' '}
+        <br/>
+
+            <TextField
+            id="m_name"
+            label="Middle Name"
             margin="normal"
             onChange={this.handleChange}
             />
-            <br/>
+            {' '}
+        <br/>
+
             <TextField
-            id="lName"
-            label="Last Name"
+            id="address"
+            label="Address"
             margin="normal"
             onChange={this.handleChange}
-         />
+            />
             {' '}
-<br/>
+        <br/>
 
-    <TextField
-    id="mName"
-    label="Middle Name"
-    margin="normal"
-    onChange={this.handleChange}
-    />
-    {' '}
-<br/>
+            <TextField
+            id="passport"
+            label="Passport"
+            margin="normal"
+            onChange={this.handleChange}
+            />
+            {' '}
+        <br/>
 
-    <TextField
-    id="address"
-    label="Address"
-    margin="normal"
-    onChange={this.handleChange}
-    />
-    {' '}
-<br/>
+            <TextField
+            id="phone"
+            label="Phone Number"
+            margin="normal"
+            onChange={this.handleChange}
+            />
+            {' '}
+        <br/>
 
-    <TextField
-    id="passport"
-    label="Passport"
-    margin="normal"
-    onChange={this.handleChange}
-    />
-    {' '}
-<br/>
-
-    <TextField
-    id="phone"
-    label="Phone Number"
-    margin="normal"
-    onChange={this.handleChange}
-    />
-    {' '}
-<br/>
-
-    <TextField
-    id="code"
-    label="Code"
-    margin="normal"
-    onChange={this.handleChange}
-    />
-    <div>
-    <Button onClick={this.handleSubmit} variant="contained" color="primary">
-        check in
-        </Button>
-        </div>
-        </form>
+            <TextField
+            id="region_id"
+            label="Region ID"
+            margin="normal"
+            onChange={this.handleChange}
+            />
+            <div>
+                <Button onClick={this.handleSubmit} variant="contained" color="primary">
+                 check in
+                </Button>
+            </div>
+            </form>
         </Wrapper>
 );
 }
 }
-const mapStateToProps = state => ({});
-
-const mapDispatchToProps = {};
+const mapStateToProps = state => ({
+    people: state.people,
+});
+const mapDispatchToProps = {
+    registrationPeople,
+};
 
 const Container = connect(
     mapStateToProps,
