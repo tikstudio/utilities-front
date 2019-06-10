@@ -7,7 +7,8 @@ import {
 const initialState = {
   peopleSingle: {},
   peoples: [],
-  page: 1,
+  page: null,
+  totalPage:null,
 };
 
 export default function reducer(state = initialState, action) {
@@ -20,11 +21,12 @@ export default function reducer(state = initialState, action) {
       };
     }
     case GET_PEOPLES_SUCCESS: {
-      const { peoples, page } = action.payload.data;
+      const { peoples, page,totalPage } = action.payload.data;
       return {
         ...state,
         peoples,
         page,
+        totalPage,
       };
     }
     case GET_PEOPLES_FAIL: {

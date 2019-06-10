@@ -10,10 +10,10 @@ import {
 
 function* getPeoples(action) {
   try {
-    const { data, page } = yield call(api.getPeoples, action.payload.data);
+    const { data, page, totalPage } = yield call(api.getPeoples, action.payload.data);
     yield put({
       type: GET_PEOPLES_SUCCESS,
-      payload: { data, page },
+      payload: { data, page,totalPage},
     });
   } catch (e) {
     console.log(e);

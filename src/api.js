@@ -23,8 +23,8 @@ export function login(data) {
   });
 }
 
-export function getPeoples(data) {
-  const query = qs(data);
+export function getPeoples(data,page,totalPage) {
+  const query = qs(data,page,totalPage);
   return axios.get(`/peoples?${query}`);
 }
 export function registrationPeople(data) {
