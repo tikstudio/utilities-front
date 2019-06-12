@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import { Link,Redirect } from 'react-router-dom';
 import Auth from '../helpers/Auth';
-import Header from './Header'
-import Menu from './Menu'
+import Header from './Header';
+import Menu from './Menu';
+// import Peoples from '../pages/Peoples';
 
 class Wrapper extends Component {
     constructor(props) {
@@ -12,7 +13,6 @@ class Wrapper extends Component {
         };
     }
     render() {
-
         if (!Auth.getToken()) {
         return <Redirect to="/login" />;
         }

@@ -21,6 +21,14 @@ class Peoples extends Component {
 
         return (
             <Wrapper>
+                <form className="d-flex justify-content-center">
+                    <input type="search" placeholder="Type your query" aria-label="Search" className="form-control"/>
+                    <button className="btn btn-primary btn-sm my-0 p" type="submit">
+                        <i className="fas fa-search"></i>
+                         <img src="search.png" alt="альтернативный текст" />
+
+            </button>
+                </form>
                 {people.map((values, id)=>{
                    return <table key={id}>
                        <tbody>
