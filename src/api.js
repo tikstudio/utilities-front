@@ -22,6 +22,9 @@ export function login(data) {
     password: data.password,
   });
 }
+export function destroyPeoples(id) {
+  return axios.delete(`/peoples?id=${id}`);
+}
 
 export function getPeoples(data,page,totalPage) {
   const query = qs(data,page,totalPage);

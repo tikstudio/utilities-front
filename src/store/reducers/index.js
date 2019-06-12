@@ -4,6 +4,7 @@ import users from './users';
 import types from './types';
 import peoples from './peoples';
 import registration from './registration';
+import destroy from './destroy';
 
 export default combineReducers({
   form,
@@ -11,4 +12,5 @@ export default combineReducers({
   types,
   peoples,
   registration,
+  destroy,
 });

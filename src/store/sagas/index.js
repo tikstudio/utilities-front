@@ -3,6 +3,7 @@ import user from './users';
 import types from './types';
 import peoples from './peoples';
 import registration from './registration';
+import destroy from './destroy';
 
 export default function* root() {
   const sagas = [
@@ -10,6 +11,7 @@ export default function* root() {
     types,
     peoples,
     registration,
+    destroy,
   ];
   yield all(sagas.map(fork));
 }
