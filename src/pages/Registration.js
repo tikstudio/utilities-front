@@ -6,8 +6,8 @@ import { connect } from 'react-redux';
 import { registrationPeople } from '../store/actions/registration';
 
 class Registration extends Component {
-    componentWillMount(data) {
-        this.props.registrationPeople(data);
+    componentWillMount() {
+        this.props.registrationPeople();
     }
     constructor(props) {
         super(props);
@@ -30,7 +30,7 @@ handleChange = (e) => {
 
 handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    console.log(e);
     this.props.registrationPeople(this.state);
     };
 render() {
