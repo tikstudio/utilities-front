@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { stringify as qs } from 'querystringify';
+import {stringify as qs} from 'querystringify';
 import Auth from './helpers/Auth';
 import Cache from './helpers/Cache';
 
@@ -22,37 +22,44 @@ export function login(data) {
     password: data.password,
   });
 }
+
 export function destroyPeoples(id) {
   return axios.delete(`/peoples?id=${id}`);
 }
 
-export function getPeoples(data,page,totalPage) {
-  const query = qs(data,page,totalPage);
+export function getPeoples(data, page, totalPage) {
+  const query = qs(data, page, totalPage);
   return axios.get(`/peoples?${query}`);
 }
+
 export function registrationPeople(data) {
-  return axios.put(`/peoples`,{
-    name:data.name,
-    l_name:data.l_name,
-    m_name:data.m_name,
-    phone:data.phone,
-    passport:data.passport,
-    region_id:data.region_id,
-    address:data.address,
-    deleted:data.deleted,
+  return axios.put(`/peoples`, {
+    name: data.name,
+    l_name: data.l_name,
+    m_name: data.m_name,
+    phone: data.phone,
+    passport: data.passport,
+    region_id: data.region_id,
+    address: data.address,
+    deleted: data.deleted,
   });
 }
+
+export function searchPeoples(search, people) {
+  return axios.post(`/peoples/search?search=${search}`);
+}
+
 export function editPeople(data) {
-  return axios.post(`/peoples`,{
-    id:data.id,
-    name:data.name,
-    l_name:data.l_name,
-    m_name:data.m_name,
-    phone:data.phone,
-    passport:data.passport,
-    region_id:data.region_id,
-    address:data.address,
-    deleted:data.deleted,
+  return axios.post(`/peoples`, {
+    id: data.id,
+    name: data.name,
+    l_name: data.l_name,
+    m_name: data.m_name,
+    phone: data.phone,
+    passport: data.passport,
+    region_id: data.region_id,
+    address: data.address,
+    deleted: data.deleted,
   });
 }
 

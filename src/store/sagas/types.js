@@ -1,14 +1,14 @@
-import { takeLatest, call, put } from 'redux-saga/effects';
-import { TYPES_FAIL, TYPES_REQUEST, TYPES_SUCCESS } from '../actions/types';
+import {takeLatest, call, put} from 'redux-saga/effects';
+import {TYPES_FAIL, TYPES_REQUEST, TYPES_SUCCESS} from '../actions/types';
 import * as api from '../../api';
 
 function* handleTypesRequest() {
   try {
-    const { data } = yield call(api.getTypes);
+    const {data} = yield call(api.getTypes);
 
     yield put({
       type: TYPES_SUCCESS,
-      payload: { types: data.types },
+      payload: {types: data.types},
     });
   } catch (e) {
     console.log(e);

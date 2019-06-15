@@ -4,7 +4,7 @@ export const REGISTRATION_PEOPLE_FAIL = 'REGISTRATION_PEOPLE_FAIL';
 
 
 export function registrationPeople(data) {
-    return {
-        type: REGISTRATION_PEOPLE_REQUEST, payload: {data},
-    };
+  return {
+    type: REGISTRATION_PEOPLE_REQUEST, payload: {data},
+  };
 }

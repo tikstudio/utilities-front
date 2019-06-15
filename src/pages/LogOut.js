@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Redirect} from 'react-router-dom';
 import Auth from '../helpers/Auth';
 
 class LogOut extends Component {
   render() {
     Auth.removeToken();
     return (
-      <Redirect to="/login" />
+      <Redirect to="/login"/>
     );
   }
 }

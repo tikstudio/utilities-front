@@ -5,6 +5,6 @@ export const LOGIN_FAIL = 'LOGIN_FAIL';
 
 export function login(data) {
   return {
-    type: LOGIN_REQUEST, payload: { data },
+    type: LOGIN_REQUEST, payload: {data},
   };
 }

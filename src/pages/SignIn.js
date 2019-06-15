@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import { Button } from '@material-ui/core';
-import { Field, reduxForm } from 'redux-form';
-import { Redirect } from 'react-router-dom';
-import { login } from '../store/actions/users';
+import {Button} from '@material-ui/core';
+import {Field, reduxForm} from 'redux-form';
+import {Redirect} from 'react-router-dom';
+import {login} from '../store/actions/users';
 import Input from '../components/form/Input';
 import Auth from "../helpers/Auth";
 
@@ -26,9 +26,9 @@ class SignIn extends Component {
   }
 
   render() {
-    const { handleSubmit, submitting, authError } = this.props;
+    const {handleSubmit, submitting, authError} = this.props;
     if (Auth.getToken()) {
-      return <Redirect to="/" />;
+      return <Redirect to="/"/>;
     }
     return (
       <div className="signIn">

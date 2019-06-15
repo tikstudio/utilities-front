@@ -4,7 +4,7 @@ export const DESTROY_PEOPLE_FAIL = 'DESTROY_PEOPLE_FAIL';
 
 
 export function destroyPeoples(data) {
-    return {
-        type: DESTROY_PEOPLE_REQUEST, payload: {data},
-    };
+  return {
+    type: DESTROY_PEOPLE_REQUEST, payload: {data},
+  };
 }

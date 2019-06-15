@@ -1,4 +1,4 @@
-import { takeLatest, call, put } from 'redux-saga/effects';
+import {takeLatest, call, put} from 'redux-saga/effects';
 import * as api from '../../api';
 
 import {
@@ -10,10 +10,10 @@ import {
 
 function* getPeoples(action) {
   try {
-    const { data, page, totalPage } = yield call(api.getPeoples, action.payload.data);
+    const {data, page, totalPage} = yield call(api.getPeoples, action.payload.data);
     yield put({
       type: GET_PEOPLES_SUCCESS,
-      payload: { data, page,totalPage},
+      payload: {data, page, totalPage},
     });
   } catch (e) {
     console.log(e);

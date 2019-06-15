@@ -6,6 +6,7 @@ import {
 
 const initialState = {
   people: {},
+  id: null,
 };
 
 export default function reducer(state = initialState, action) {
@@ -17,10 +18,11 @@ export default function reducer(state = initialState, action) {
       };
     }
     case EDIT_PEOPLE_SUCCESS: {
-      const {people} = action.payload.data;
+      const {people, id,} = action.payload.data;
       return {
         ...state,
         people,
+        id,
       };
     }
     case EDIT_PEOPLE_FAIL: {

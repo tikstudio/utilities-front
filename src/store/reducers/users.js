@@ -12,7 +12,7 @@ const initialState = {
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case LOGIN_REQUEST: {
-      return { ...state, authError: '' };
+      return {...state, authError: ''};
     }
     case LOGIN_SUCCESS: {
       return {
@@ -22,7 +22,7 @@ export default function reducer(state = initialState, action) {
       };
     }
     case LOGIN_FAIL: {
-      return { ...state, authError: action.message };
+      return {...state, authError: action.message};
     }
 
     default: {

@@ -3,7 +3,6 @@ import { Link,Redirect } from 'react-router-dom';
 import Auth from '../helpers/Auth';
 import Header from './Header';
 import Menu from './Menu';
-// import Peoples from '../pages/Peoples';
 
 class Wrapper extends Component {
     constructor(props) {

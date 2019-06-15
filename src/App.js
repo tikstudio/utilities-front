@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import React, {Component} from 'react';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import SignIn from './pages/SignIn';
 import Admin from './pages/Admin';
 import Manager from './pages/Manager';
@@ -10,20 +10,19 @@ import Registration from './pages/Registration';
 import Edit from './pages/Edit';
 
 
-
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path="/login" component={SignIn} />
-          <Route path="/log-out" component={LogOut} />
-          <Route path="/manager" component={Manager} />
-          <Route path="/peoples" component={Peoples} />
-          <Route path="/comunals" component={Comunals} />
-          <Route path="/registration" component={Registration} />
-          <Route path="/edit" component={Edit} />
-          <Route component={Admin} />
+          <Route path="/login" component={SignIn}/>
+          <Route path="/log-out" component={LogOut}/>
+          <Route path="/manager" component={Manager}/>
+          <Route path="/peoples" component={Peoples}/>
+          <Route path="/comunals" component={Comunals}/>
+          <Route path="/registration" component={Registration}/>
+          <Route path="/edit" component={Edit}/>
+          <Route component={Admin}/>
         </Switch>
       </BrowserRouter>
     );

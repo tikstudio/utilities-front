@@ -6,6 +6,8 @@ import peoples from './peoples';
 import registration from './registration';
 import destroy from './destroy';
 import edit from './edit'
+import search from './search'
+
 
 export default combineReducers({
   form,
@@ -15,4 +17,5 @@ export default combineReducers({
   registration,
   destroy,
   edit,
+  search,
 });

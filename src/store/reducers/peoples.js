@@ -8,7 +8,7 @@ const initialState = {
   peopleSingle: {},
   peoples: [],
   page: null,
-  totalPage:null,
+  totalPage: null,
 };
 
 export default function reducer(state = initialState, action) {
@@ -21,7 +21,7 @@ export default function reducer(state = initialState, action) {
       };
     }
     case GET_PEOPLES_SUCCESS: {
-      const { peoples, page,totalPage } = action.payload.data;
+      const {peoples, page, totalPage} = action.payload.data;
       return {
         ...state,
         peoples,

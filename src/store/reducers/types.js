@@ -1,4 +1,4 @@
-import { TYPES_REQUEST, TYPES_SUCCESS } from '../actions/types';
+import {TYPES_REQUEST, TYPES_SUCCESS} from '../actions/types';
 
 const initialState = {
   list: [],
@@ -7,7 +7,7 @@ const initialState = {
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case TYPES_REQUEST: {
-      return { ...state };
+      return {...state};
     }
     case TYPES_SUCCESS: {
       return {

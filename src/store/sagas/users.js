@@ -1,4 +1,4 @@
-import { takeLatest, call, put } from 'redux-saga/effects';
+import {takeLatest, call, put} from 'redux-saga/effects';
 import * as api from '../../api';
 
 import {
@@ -10,13 +10,13 @@ import {
 
 function* requestSignIn(action) {
   try {
-    const { data } = yield call(api.login, action.payload.data);
+    const {data} = yield call(api.login, action.payload.data);
     if (data.token) {
       localStorage.setItem('token', data.token);
     }
     yield put({
       type: LOGIN_SUCCESS,
-      payload: { user: data.user },
+      payload: {user: data.user},
     });
   } catch (e) {
     console.log(e.message);
