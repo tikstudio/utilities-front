@@ -2,7 +2,7 @@ import {
   SEARCH_PEOPLES_REQUEST,
   SEARCH_PEOPLES_SUCCESS,
   SEARCH_PEOPLES_FAIL,
-} from '../actions/search';
+} from '../actions/searchPeople';
 
 const initialState = {
   people: [],

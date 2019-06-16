@@ -4,8 +4,9 @@ import types from './types';
 import peoples from './peoples';
 import registration from './registration';
 import destroy from './destroy';
-import edit from './edit'
-import search from './search'
+import edit from './edit';
+import searchPeople from './searchPeople';
+import searchCalc from './searchCalc'
 
 export default function* root() {
   const sagas = [
@@ -15,7 +16,8 @@ export default function* root() {
     registration,
     destroy,
     edit,
-    search,
+    searchPeople,
+    searchCalc,
   ];
   yield all(sagas.map(fork));
 }

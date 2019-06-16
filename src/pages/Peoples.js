@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import Wrapper from '../components/Wrapper';
 import TextField from '@material-ui/core/TextField';
+import Button from "@material-ui/core/Button";
 import {Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {getPeoples} from '../store/actions/peoples';
 import {destroyPeoples} from '../store/actions/destroy';
 import {editPeople} from '../store/actions/edit';
-import {searchPeoples} from '../store/actions/search';
+import {searchPeoples} from '../store/actions/searchPeople';
+import {searchCalc} from '../store/actions/searchCalc';
 
 
 class Peoples extends Component {
@@ -15,6 +17,7 @@ class Peoples extends Component {
     this.state = {
       redirect: false,
       search: '',
+      searchCalculator: '',
     };
   }
 
@@ -24,11 +27,10 @@ class Peoples extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state.search)
     this.props.searchPeoples(this.state.search);
-    console.log(this.state.search)
+    this.props.searchCalc(this.state.searchCalculator);
   }
-  // selectPeople =(values)=>{
+
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value,
@@ -42,8 +44,7 @@ class Peoples extends Component {
       },
       100);
   }
-  //
-  // }
+
   edit = (values) => {
     console.log(this.props);
     this.props.editPeople(values.id);
@@ -56,6 +57,7 @@ class Peoples extends Component {
     if (this.state.redirect) {
       return <Redirect to='./Edit'/>
     }
+
     const totalPage = this.props.totalPage;
     const countPages = [];
     for (let i = 1; i <= totalPage; i++) {
@@ -64,6 +66,8 @@ class Peoples extends Component {
     const filterPeople = this.props.people;
     const people = this.props.peoples;
     console.log(this.props.people.length);
+    console.log(this.props);
+
     return (
       <Wrapper>
         <form onSubmit={this.handleSubmit}>
@@ -73,6 +77,15 @@ class Peoples extends Component {
             margin="normal"
             onChange={this.handleChange}
           />
+          <TextField
+            id="searchCalculator"
+            label="searchCalculator"
+            margin="normal"
+            onChange={this.handleChange}
+          />
+          <Button onClick={this.handleSubmit} variant="contained" color="primary">
+            check in
+          </Button>
         </form>
         <table>
           <tbody>
@@ -116,8 +129,8 @@ const mapStateToProps = (state) => ({
   peoples: state.peoples.peoples,
   page: state.peoples.page,
   totalPage: state.peoples.totalPage,
-  search: state.search,
-  people: state.search.people,
+  people: state.searchPeople.people,
+  peopleData: state.searchCalc.peopleData,
 });
 
 const mapDispatchToProps = {
@@ -125,6 +138,7 @@ const mapDispatchToProps = {
   destroyPeoples,
   editPeople,
   searchPeoples,
+  searchCalc,
 };
 
 const Container = connect(

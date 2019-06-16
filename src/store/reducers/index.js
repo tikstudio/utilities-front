@@ -5,8 +5,9 @@ import types from './types';
 import peoples from './peoples';
 import registration from './registration';
 import destroy from './destroy';
-import edit from './edit'
-import search from './search'
+import edit from './edit';
+import searchPeople from './searchPeople';
+import searchCalc from './searchCalc';
 
 
 export default combineReducers({
@@ -17,5 +18,6 @@ export default combineReducers({
   registration,
   destroy,
   edit,
-  search,
+  searchPeople,
+  searchCalc,
 });

@@ -45,8 +45,12 @@ export function registrationPeople(data) {
   });
 }
 
-export function searchPeoples(search, people) {
+export function searchPeoples(search) {
   return axios.post(`/peoples/search?search=${search}`);
+}
+
+export function searchCalc(search) {
+  return axios.post(`/calculators/search?search=${search}`);
 }
 
 export function editPeople(data) {
