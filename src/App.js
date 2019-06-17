@@ -21,7 +21,7 @@ class App extends Component {
           <Route path="/peoples" component={Peoples}/>
           <Route path="/comunals" component={Comunals}/>
           <Route path="/registration" component={Registration}/>
-          <Route path="/edit" component={Edit}/>
+          <Route path="/edit/:id" component={Edit}/>
           <Route component={Admin}/>
         </Switch>
       </BrowserRouter>

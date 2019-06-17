@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Wrapper from '../components/Wrapper';
 import TextField from '@material-ui/core/TextField';
 import Button from "@material-ui/core/Button";
-import {Redirect} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {getPeoples} from '../store/actions/peoples';
 import {destroyPeoples} from '../store/actions/destroy';
@@ -15,13 +15,13 @@ class Peoples extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      redirect: false,
       search: '',
       searchCalculator: '',
     };
   }
 
   componentDidMount() {
+    this.props.searchPeoples();
     this.props.getPeoples();
   }
 
@@ -45,18 +45,8 @@ class Peoples extends Component {
       100);
   }
 
-  edit = (values) => {
-    console.log(this.props);
-    this.props.editPeople(values.id);
-    this.setState({
-      redirect: true,
-    });
-  }
-
   render() {
-    if (this.state.redirect) {
-      return <Redirect to='./Edit'/>
-    }
+
 
     const totalPage = this.props.totalPage;
     const countPages = [];
@@ -100,7 +90,11 @@ class Peoples extends Component {
                   <td>{values.m_name}</td>
                   <td>{values.address}</td>
                   <td>{values.phone}</td>
-                  <td onClick={() => this.edit(values)}>Edit</td>
+                  <td>
+                    <Link to={`/edit/${values.id}`}>
+                      Edit
+                    </Link>
+                  </td>
                   <td onClick={() => this.delete(values)}>Delete</td>
                 </tr>)
             }) :
@@ -113,7 +107,11 @@ class Peoples extends Component {
                   <td>{values.m_name}</td>
                   <td>{values.address}</td>
                   <td>{values.phone}</td>
-                  <td onClick={() => this.edit(values)}>Edit</td>
+                  <td>
+                    <Link to={`/edit/${values.id}`}>
+                      Edit
+                    </Link>
+                  </td>
                   <td onClick={() => this.delete(values)}>Delete</td>
                 </tr>
               );
