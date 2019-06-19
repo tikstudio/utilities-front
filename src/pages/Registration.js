@@ -4,10 +4,15 @@ import Button from '@material-ui/core/Button';
 import Wrapper from "../components/Wrapper";
 import {connect} from 'react-redux';
 import {registrationPeople} from '../store/actions/registration';
+import {getRegions} from "../store/actions/regions";
 
 class Registration extends Component {
   componentWillMount() {
     this.props.registrationPeople();
+  }
+
+  componentDidMount() {
+    this.props.getRegions();
   }
 
   constructor(props) {
@@ -33,9 +38,12 @@ class Registration extends Component {
     e.preventDefault();
     console.log(e);
     this.props.registrationPeople(this.state);
+    console.log(this.state)
   };
 
   render() {
+    const regions = this.props.regions;
+    console.log(regions)
     return (
       <Wrapper title="Main">
         <form onSubmit={this.handleSubmit}>
@@ -90,14 +98,14 @@ class Registration extends Component {
           />
           {' '}
           <br/>
-
-          <TextField
-            id="region_id"
-            label="Region ID"
-            margin="normal"
-            onChange={this.handleChange}
-          />
-          <div>
+            <select className="select">
+              {regions.map((values) => {
+                return (
+                  <option onChange={this.handleChange} id="phone" key={values.id}>{values.region_name}</option>
+                )
+              })}
+            </select>
+             <div>
             <Button onClick={this.handleSubmit} variant="contained" color="primary">
               check in
             </Button>
@@ -110,9 +118,11 @@ class Registration extends Component {
 
 const mapStateToProps = state => ({
   people: state.people,
+  regions: state.regions.regions,
 });
 const mapDispatchToProps = {
   registrationPeople,
+  getRegions,
 };
 
 const Container = connect(

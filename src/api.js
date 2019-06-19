@@ -49,6 +49,10 @@ export function searchPeoples(search) {
   return axios.post(`/peoples/search?search=${search}`);
 }
 
+export function getRegions() {
+  return axios.get(`/regions`);
+}
+
 export function searchCalc(search) {
   return axios.post(`/calculators/search?search=${search}`);
 }

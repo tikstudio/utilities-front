@@ -6,7 +6,8 @@ import registration from './registration';
 import destroy from './destroy';
 import edit from './edit';
 import searchPeople from './searchPeople';
-import searchCalc from './searchCalc'
+import searchCalc from './searchCalc';
+import regions from './regions';
 
 export default function* root() {
   const sagas = [
@@ -18,6 +19,7 @@ export default function* root() {
     edit,
     searchPeople,
     searchCalc,
+    regions,
   ];
   yield all(sagas.map(fork));
 }

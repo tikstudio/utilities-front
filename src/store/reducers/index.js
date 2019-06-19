@@ -8,6 +8,8 @@ import destroy from './destroy';
 import edit from './edit';
 import searchPeople from './searchPeople';
 import searchCalc from './searchCalc';
+import regions from './regions';
+
 
 
 export default combineReducers({
@@ -20,4 +22,5 @@ export default combineReducers({
   edit,
   searchPeople,
   searchCalc,
+  regions,
 });
