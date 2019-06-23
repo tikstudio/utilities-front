@@ -9,6 +9,9 @@ import edit from './edit';
 import searchPeople from './searchPeople';
 import searchCalc from './searchCalc';
 import regions from './regions';
+import getCalc from './getCalc';
+import destroyCalc from './destroyCalc';
+import createCalc from './createCalc';
 
 
 
@@ -23,4 +26,7 @@ export default combineReducers({
   searchPeople,
   searchCalc,
   regions,
+  getCalc,
+  destroyCalc,
+  createCalc,
 });

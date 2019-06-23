@@ -42,7 +42,6 @@ class Peoples extends Component {
   }
 
 
-
   render() {
     const people = this.props.peoples;
     const totalPage = this.props.totalPage;
@@ -54,7 +53,7 @@ class Peoples extends Component {
 
 
     return (
-      <Wrapper>
+      <Wrapper title="Peoples">
         <form onSubmit={this.handleSubmit}>
           <TextField
             style={{position: 'relative', left: 624}}
@@ -65,7 +64,7 @@ class Peoples extends Component {
           />
         </form>
         <table>
-          <tbody>
+          <thead>
           <tr>
             <td>ID</td>
             <td>name</td>
@@ -76,43 +75,46 @@ class Peoples extends Component {
             <td></td>
             <td></td>
           </tr>
-          {this.props.people.length != 0 ?
-          filterPeople.map((values) => {
-            return (
-              <tr key={values.id}>
-                <td>{values.id}</td>
-                <td>{values.name}</td>
-                <td>{values.l_name}</td>
-                <td>{values.m_name}</td>
-                <td>{values.address}</td>
-                <td>{values.phone}</td>
-                <td>
-                  <Link to={`/edit/${values.id}`}>
-                    Edit
-                  </Link>
-                </td>
-                <td onClick={() => this.delete(values)}>Delete</td>
-              </tr>)
-             }) :
-            this.props.peoples.map((values) => {
-               return (
-                 <tr className={"row"} key={values.id}>
-                   <td>{values.id}</td>
-                   <td>{values.name}</td>
-                   <td>{values.l_name}</td>
-                   <td>{values.m_name}</td>
-                   <td>{values.address}</td>
-                   <td>{values.phone}</td>
-                   <td>
-                     <Link to={`/edit/${values.id}`}>
-                       Edit
-                     </Link>
-                   </td>
-                   <td onClick={() => this.delete(values)}>Delete</td>
-                 </tr>
-               );
+          </thead>
+          <tbody>
 
-          })}
+          {this.props.people.length !== 0 ?
+            filterPeople.map((values) => {
+              return (
+                <tr  key={values.id}>
+                  <td>{values.id}</td>
+                  <td>{values.name}</td>
+                  <td>{values.l_name}</td>
+                  <td>{values.m_name}</td>
+                  <td>{values.address}</td>
+                  <td>{values.phone}</td>
+                  <td>
+                    <Link to={`/edit/${values.id}`}>
+                      Edit
+                    </Link>
+                  </td>
+                  <td onClick={() => this.delete(values)}>Delete</td>
+                </tr>)
+            }) :
+            people.map((values) => {
+              return (
+                <tr  key={values.id}>
+                  <td>{values.id}</td>
+                  <td>{values.name}</td>
+                  <td>{values.l_name}</td>
+                  <td>{values.m_name}</td>
+                  <td>{values.address}</td>
+                  <td>{values.phone}</td>
+                  <td>
+                    <Link to={`/edit/${values.id}`}>
+                      Edit
+                    </Link>
+                  </td>
+                  <td onClick={() => this.delete(values)}>Delete</td>
+                </tr>
+              );
+
+            })}
           </tbody>
         </table>
       </Wrapper>

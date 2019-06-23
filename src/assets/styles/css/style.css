@@ -62,4 +62,8 @@ table td {
 .select {
     border: none;
 }
+.input-field{
+    width: 850px;
+}
+
 

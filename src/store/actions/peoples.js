@@ -21,6 +21,6 @@ export const GET_PEOPLE_BY_ID_FAIL = 'GET_PEOPLE_BY_ID_FAIL';
 export function getPeopleById(id) {
   return {
     type: GET_PEOPLE_BY_ID_REQUEST,
-    payload: {id,},
+    payload: {id},
   };
 }

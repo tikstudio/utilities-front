@@ -8,6 +8,9 @@ import edit from './edit';
 import searchPeople from './searchPeople';
 import searchCalc from './searchCalc';
 import regions from './regions';
+import getCalc from './getCalc';
+import destroyCalc from './destroyCalc';
+import createCalc from './createCalc';
 
 export default function* root() {
   const sagas = [
@@ -20,6 +23,9 @@ export default function* root() {
     searchPeople,
     searchCalc,
     regions,
+    getCalc,
+    destroyCalc,
+    createCalc,
   ];
   yield all(sagas.map(fork));
 }

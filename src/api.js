@@ -26,10 +26,20 @@ export function login(data) {
 export function destroyPeoples(id) {
   return axios.delete(`/peoples?id=${id}`);
 }
+export function destroyCalc(id) {
+  return axios.delete(`/calculators`,{
+    id,
+  });
+}
 
 export function getPeoples(data, page, totalPage) {
   const query = qs(data, page, totalPage);
   return axios.get(`/peoples?${query}`);
+}
+
+export function getCalc(data) {
+  const query = qs(data);
+  return axios.get(`/calculators?${query}`);
 }
 
 export function registrationPeople(data) {
@@ -42,6 +52,14 @@ export function registrationPeople(data) {
     region_id: data.region_id,
     address: data.address,
     deleted: data.deleted,
+  });
+}
+export function createCalc(data) {
+  return axios.put(`/calculators`, {
+    type_id: data.type_id,
+    serial_number:data.serial_number,
+    address: data.address,
+    people_id: data.people_id,
   });
 }
 

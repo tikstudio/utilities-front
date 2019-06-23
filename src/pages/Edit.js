@@ -22,8 +22,8 @@ class Edit extends Component {
   }
 
   componentDidMount() {
-    const {id,name,l_name,m_name,address,passport,phone,region_id} = this.props.match.params;
-    this.props.getPeopleById(id,name,l_name,m_name,address,passport,phone,region_id);
+    const {id} = this.props.match.params;
+    this.props.getPeopleById(id);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -53,7 +53,7 @@ class Edit extends Component {
     console.log(people);
     console.log(this.props);
     return (
-      <Wrapper title="Main">
+      <Wrapper title="Edit people">
         <form onSubmit={this.handleSubmit}>
           <TextField
             type="hidden"

@@ -7,7 +7,7 @@ class Admin extends Component {
 
   render() {
     return (
-      <Wrapper title="Main">
+      <Wrapper title="Dashboard">
         <PieChart
           data={[
             {title: 'One', value: 60, color: '#E38627'},

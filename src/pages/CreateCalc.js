@@ -3,28 +3,16 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Wrapper from "../components/Wrapper";
 import {connect} from 'react-redux';
-import {registrationPeople} from '../store/actions/registration';
-import {getRegions} from "../store/actions/regions";
+import {createCalc} from "../store/actions/createCalc";
 
-class Registration extends Component {
-  componentWillMount() {
-    this.props.registrationPeople();
-  }
-
-  componentDidMount() {
-    this.props.getRegions();
-  }
-
+class CreateCalc extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      l_name: '',
-      m_name: '',
+      type_id: '',
+      serial_number: '',
       address: '',
-      passport: '',
-      phone: '',
-      region_id: '',
+      people_id: '',
     };
   }
 
@@ -37,38 +25,26 @@ class Registration extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(e);
-    this.props.registrationPeople(this.state);
+    this.props.createCalc(this.state);
     console.log(this.state)
   };
 
   render() {
-    const regions = this.props.regions;
-    console.log(regions)
     return (
-      <Wrapper title="Registration people">
+      <Wrapper title="Create calculator">
         <form onSubmit={this.handleSubmit}>
           <TextField
             className="input-field"
-            id="name"
-            label="User Name"
+            id="type_id"
+            label="Type ID"
             margin="normal"
             onChange={this.handleChange}
           />
           <br/>
           <TextField
             className="input-field"
-            id="l_name"
-            label="Last Name"
-            margin="normal"
-            onChange={this.handleChange}
-          />
-          {' '}
-          <br/>
-
-          <TextField
-            className="input-field"
-            id="m_name"
-            label="Middle Name"
+            id="serial_number"
+            label="Serial Number"
             margin="normal"
             onChange={this.handleChange}
           />
@@ -87,31 +63,15 @@ class Registration extends Component {
 
           <TextField
             className="input-field"
-            id="passport"
-            label="Passport"
+            id="people_id"
+            label="People ID"
             margin="normal"
             onChange={this.handleChange}
           />
           {' '}
           <br/>
 
-          <TextField
-            className="input-field"
-            id="phone"
-            label="Phone Number"
-            margin="normal"
-            onChange={this.handleChange}
-          />
-          {' '}
-          <br/>
-            <select className="select">
-              {regions.map((values) => {
-                return (
-                  <option onChange={this.handleChange} id="phone" key={values.id}>{values.region_name}</option>
-                )
-              })}
-            </select>
-             <div>
+          <div>
             <Button onClick={this.handleSubmit} variant="contained" color="primary">
               check in
             </Button>
@@ -123,18 +83,16 @@ class Registration extends Component {
 }
 
 const mapStateToProps = state => ({
-  people: state.people,
-  regions: state.regions.regions,
+
 });
 const mapDispatchToProps = {
-  registrationPeople,
-  getRegions,
+  createCalc,
 };
 
 const Container = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Registration);
+)(CreateCalc);
 
 export default Container;
 

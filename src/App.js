@@ -8,6 +8,7 @@ import Peoples from './pages/Peoples';
 import Comunals from './pages/Comunals';
 import Registration from './pages/Registration';
 import Edit from './pages/Edit';
+import CreateCalc from './pages/CreateCalc';
 
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
           <Route path="/comunals" component={Comunals}/>
           <Route path="/registration" component={Registration}/>
           <Route path="/edit/:id" component={Edit}/>
+          <Route path="/create-calc" component={CreateCalc}/>
           <Route component={Admin}/>
         </Switch>
       </BrowserRouter>

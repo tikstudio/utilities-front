@@ -2,6 +2,9 @@ import {
   GET_PEOPLES_REQUEST,
   GET_PEOPLES_SUCCESS,
   GET_PEOPLES_FAIL,
+  GET_PEOPLE_BY_ID_REQUEST,
+  GET_PEOPLE_BY_ID_SUCCESS,
+  GET_PEOPLE_BY_ID_FAIL,
 } from '../actions/peoples';
 
 const initialState = {
@@ -36,6 +39,26 @@ export default function reducer(state = initialState, action) {
         peopleSingle: {},
       };
     }
+    case GET_PEOPLE_BY_ID_REQUEST: {
+      return {
+        ...state,
+        peoples: [],
+      };
+    }
+    case GET_PEOPLE_BY_ID_SUCCESS: {
+      const {peoples} = action.payload.data;
+      return {
+        ...state,
+        peoples,
+      };
+    }
+    case GET_PEOPLE_BY_ID_FAIL: {
+      return {
+        ...state,
+        peoples: [],
+      };
+    }
+
     default: {
       return state;
     }
