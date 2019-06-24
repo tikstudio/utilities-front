@@ -19,19 +19,8 @@ class Comunals extends Component {
     this.props.getCalc();
   }
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    this.props.searchCalc(this.state.searchCalculator);
-  }
-
-  handleChange = (e) => {
-    this.setState({
-      [e.target.id]: e.target.value,
-    });
-  };
-
   delete = (val) => {
-    this.props.destroyCalc(val.id);
+    this.props.destroyCalc(val);
   }
 
   render() {
@@ -43,11 +32,15 @@ class Comunals extends Component {
     // const calc = this.props.peopleData;
     const calculators = this.props.calculators;
     const type = [];
+    const id = [];
     calculators.map((value) => {
-      type.push(value.type)
-      return (value)
+      id.push(value.people_id);
+      type.push(value.type);
+      return (value);
     })
-    console.log(this.props)
+
+    // console.log(id)
+    console.log(calculators)
     return (
       <Wrapper title="Comunals">
         <table>
@@ -76,8 +69,16 @@ class Comunals extends Component {
                 </td>
                 <td onClick={() => this.delete(val)}>Delete</td>
               </tr>
+
             )
           })}
+
+          {/*{id.map((val,id) => {*/}
+          {/*  */}
+          {/*    */}
+          {/*}*/}
+          {/*)}*/}
+
           </tbody>
         </table>
       </Wrapper>
