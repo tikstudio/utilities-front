@@ -26,8 +26,13 @@ export function login(data) {
 export function destroyPeoples(id) {
   return axios.delete(`/peoples?id=${id}`);
 }
+
+export function getPeopleById(id) {
+  return axios.get(`/peoples/${id}`);
+}
+
 export function destroyCalc(id) {
-  return axios.delete(`/calculators`,{
+  return axios.delete(`/calculators`, {
     id,
   });
 }
@@ -54,10 +59,11 @@ export function registrationPeople(data) {
     deleted: data.deleted,
   });
 }
+
 export function createCalc(data) {
   return axios.put(`/calculators`, {
     type_id: data.type_id,
-    serial_number:data.serial_number,
+    serial_number: data.serial_number,
     address: data.address,
     people_id: data.people_id,
   });

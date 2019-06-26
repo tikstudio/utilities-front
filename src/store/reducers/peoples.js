@@ -10,8 +10,10 @@ import {
 const initialState = {
   peopleSingle: {},
   peoples: [],
+  id: null,
   page: null,
   totalPage: null,
+  people: {},
 };
 
 export default function reducer(state = initialState, action) {
@@ -43,19 +45,21 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         peoples: [],
+        people: {},
       };
     }
     case GET_PEOPLE_BY_ID_SUCCESS: {
-      const {peoples} = action.payload.data;
+      const {people} = action.payload;
       return {
         ...state,
-        peoples,
+        people,
       };
     }
     case GET_PEOPLE_BY_ID_FAIL: {
       return {
         ...state,
         peoples: [],
+        people: {},
       };
     }
 

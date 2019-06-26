@@ -27,7 +27,8 @@ class Edit extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const {id, name, l_name, m_name, address, passport, phone, region_id} = nextProps.people;
+    const {id, name, l_name, m_name, address, passport, phone, region_id} = nextProps.people || {};
+    console.log(nextProps.people);
     if (!this.props.people.id && id) {
       this.setState(
         {id, name, l_name, m_name, address, passport, phone, region_id})
@@ -48,10 +49,7 @@ class Edit extends Component {
   }
 
   render() {
-
-    const people = this.props.peoples;
-    console.log(people);
-    console.log(this.props);
+    console.log(this.state, 11)
     return (
       <Wrapper title="Edit people">
         <form onSubmit={this.handleSubmit}>
@@ -66,6 +64,7 @@ class Edit extends Component {
             id="name"
             label="User Name"
             margin="normal"
+            value={this.state.name}
             onChange={this.handleChange}
           />
           <br/>
@@ -73,6 +72,7 @@ class Edit extends Component {
             id="l_name"
             label="Last Name"
             margin="normal"
+            value={this.state.l_name}
             onChange={this.handleChange}
           />
           {' '}
@@ -82,6 +82,7 @@ class Edit extends Component {
             id="m_name"
             label="Middle Name"
             margin="normal"
+            value={this.state.m_name}
             onChange={this.handleChange}
           />
           {' '}
@@ -91,6 +92,7 @@ class Edit extends Component {
             id="address"
             label="Address"
             margin="normal"
+            value={this.state.address}
             onChange={this.handleChange}
           />
           {' '}
@@ -100,6 +102,7 @@ class Edit extends Component {
             id="passport"
             label="Passport"
             margin="normal"
+            value={this.state.passport}
             onChange={this.handleChange}
           />
           {' '}
@@ -109,6 +112,7 @@ class Edit extends Component {
             id="phone"
             label="Phone Number"
             margin="normal"
+            value={this.state.phone}
             onChange={this.handleChange}
           />
           {' '}
@@ -118,6 +122,7 @@ class Edit extends Component {
             id="region_id"
             label="Region ID"
             margin="normal"
+            value={this.state.region_id}
             onChange={this.handleChange}
           />
           <div>
@@ -133,6 +138,7 @@ class Edit extends Component {
 
 const mapStateToProps = state => ({
   peoples: state.peoples.peoples,
+  people: state.peoples.people,
   id: state.peoples.peoples.id,
 });
 const mapDispatchToProps = {

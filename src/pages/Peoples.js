@@ -18,7 +18,6 @@ class Peoples extends Component {
   }
 
   componentDidMount() {
-    this.props.searchPeoples();
     this.props.getPeoples();
   }
 
