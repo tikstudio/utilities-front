@@ -8,7 +8,6 @@ import {
 } from '../actions/peoples';
 
 const initialState = {
-  peopleSingle: {},
   peoples: [],
   id: null,
   page: null,
@@ -22,7 +21,6 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         peoples: [],
-        peopleSingle: {},
       };
     }
     case GET_PEOPLES_SUCCESS: {

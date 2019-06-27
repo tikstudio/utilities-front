@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Wrapper from '../components/Wrapper';
+import { Redirect } from 'react-router-dom'
 import {connect} from 'react-redux';
 import {editPeople} from '../store/actions/edit';
 import {getPeopleById, getPeoples} from '../store/actions/peoples';
@@ -18,6 +19,7 @@ class Edit extends Component {
       passport: '',
       phone: '',
       region_id: '',
+      redirect: false,
     };
   }
 
@@ -44,12 +46,19 @@ class Edit extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.props);
+    this.setState({
+      redirect: true,
+    })
+    console.log(this.state.redirect);
     this.props.editPeople(this.state);
+    // regex:"[A-Z]+\d{7}"
   }
 
+
   render() {
-    console.log(this.state, 11)
+    if (this.state.redirect) {
+      return <Redirect to='/peoples' />
+    }
     return (
       <Wrapper title="Edit people">
         <form onSubmit={this.handleSubmit}>
@@ -126,7 +135,7 @@ class Edit extends Component {
             onChange={this.handleChange}
           />
           <div>
-            <Button onClick={this.handleSubmit} variant="contained" color="primary">
+            <Button  onClick={this.handleSubmit} variant="contained" color="primary">
               check in
             </Button>
           </div>

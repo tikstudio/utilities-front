@@ -53,9 +53,9 @@ class Peoples extends Component {
 
     return (
       <Wrapper title="Peoples">
-        <form onSubmit={this.handleSubmit}>
+        <form  onSubmit={this.handleSubmit}>
           <TextField
-            style={{position: 'relative', left: 624}}
+            style={{position: 'relative', left: 24, width:800}}
             id="search"
             label="search"
             margin="normal"
@@ -66,13 +66,12 @@ class Peoples extends Component {
           <thead>
           <tr>
             <td>ID</td>
-            <td>name</td>
-            <td>l_name</td>
-            <td>m_name</td>
-            <td>address</td>
-            <td>phone</td>
-            <td></td>
-            <td></td>
+            <td>Name</td>
+            <td>Last Name</td>
+            <td>Middle Name</td>
+            <td>Address</td>
+            <td>Phone</td>
+            <td colSpan="2"><b><Link to="/registration">Add</Link></b></td>
           </tr>
           </thead>
           <tbody>
@@ -80,7 +79,7 @@ class Peoples extends Component {
           {this.props.people.length !== 0 ?
             filterPeople.map((values) => {
               return (
-                <tr  key={values.id}>
+                <tr key={values.id}>
                   <td>{values.id}</td>
                   <td>{values.name}</td>
                   <td>{values.l_name}</td>
@@ -88,7 +87,7 @@ class Peoples extends Component {
                   <td>{values.address}</td>
                   <td>{values.phone}</td>
                   <td>
-                    <Link to={`/edit/${values.id}`}>
+                    <Link to={`edit/${values.id}`}>
                       Edit
                     </Link>
                   </td>
@@ -105,7 +104,7 @@ class Peoples extends Component {
                   <td>{values.address}</td>
                   <td>{values.phone}</td>
                   <td>
-                    <Link to={`/edit/${values.id}`}>
+                    <Link to={`edit/${values.id}`}>
                       Edit
                     </Link>
                   </td>

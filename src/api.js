@@ -23,30 +23,17 @@ export function login(data) {
   });
 }
 
-export function destroyPeoples(id) {
-  return axios.delete(`/peoples?id=${id}`);
-}
-
-export function getPeopleById(id) {
-  return axios.get(`/peoples/${id}`);
-}
-
-export function destroyCalc(id) {
-  return axios.delete(`/calculators`, {
-    id,
-  });
-}
-
 export function getPeoples(data, page, totalPage) {
   const query = qs(data, page, totalPage);
   return axios.get(`/peoples?${query}`);
 }
 
-export function getCalc(data) {
-  const query = qs(data);
-  return axios.get(`/calculators?${query}`);
+export function getPeopleById(id) {
+  return axios.get(`/peoples/${id}`);
 }
-
+export function searchPeoples(search) {
+  return axios.post(`/peoples/search?search=${search}`);
+}
 export function registrationPeople(data) {
   return axios.put(`/peoples`, {
     name: data.name,
@@ -60,27 +47,6 @@ export function registrationPeople(data) {
   });
 }
 
-export function createCalc(data) {
-  return axios.put(`/calculators`, {
-    type_id: data.type_id,
-    serial_number: data.serial_number,
-    address: data.address,
-    people_id: data.people_id,
-  });
-}
-
-export function searchPeoples(search) {
-  return axios.post(`/peoples/search?search=${search}`);
-}
-
-export function getRegions() {
-  return axios.get(`/regions`);
-}
-
-export function searchCalc(search) {
-  return axios.post(`/calculators/search?search=${search}`);
-}
-
 export function editPeople(data) {
   return axios.post(`/peoples`, {
     id: data.id,
@@ -92,6 +58,38 @@ export function editPeople(data) {
     region_id: data.region_id,
     address: data.address,
     deleted: data.deleted,
+  });
+}
+
+export function destroyPeoples(id) {
+  return axios.delete(`/peoples?id=${id}`);
+}
+
+export function getRegions() {
+  return axios.get(`/regions`);
+}
+
+export function getCalc(data) {
+  const query = qs(data);
+  return axios.get(`/calculators?${query}`);
+}
+
+export function createCalc(data) {
+  return axios.put(`/calculators`, {
+    type_id: data.type_id,
+    serial_number: data.serial_number,
+    address: data.address,
+    people_id: data.people_id,
+  });
+}
+
+export function searchCalc(search) {
+  return axios.post(`/calculators/search?search=${search}`);
+}
+
+export function destroyCalc(id) {
+  return axios.delete(`/calculators`, {
+    id,
   });
 }
 
