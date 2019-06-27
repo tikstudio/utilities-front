@@ -88,9 +88,7 @@ export function searchCalc(search) {
 }
 
 export function destroyCalc(id) {
-  return axios.delete(`/calculators`, {
-    id,
-  });
+  return axios.delete(`/calculators?id=${id}`);
 }
 
 export function getTypes() {

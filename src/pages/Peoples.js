@@ -21,6 +21,11 @@ class Peoples extends Component {
     this.props.getPeoples();
   }
 
+  componentWillUnmount() {
+    this.setState({search: '',})
+    this.props.getPeoples(this.state);
+  }
+
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.searchPeoples(this.state.search);
@@ -53,9 +58,9 @@ class Peoples extends Component {
 
     return (
       <Wrapper title="Peoples">
-        <form  onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <TextField
-            style={{position: 'relative', left: 24, width:800}}
+            style={{position: 'relative', left: 24, width: 800}}
             id="search"
             label="search"
             margin="normal"
@@ -96,7 +101,7 @@ class Peoples extends Component {
             }) :
             people.map((values) => {
               return (
-                <tr  key={values.id}>
+                <tr key={values.id}>
                   <td>{values.id}</td>
                   <td>{values.name}</td>
                   <td>{values.l_name}</td>

@@ -6,7 +6,7 @@ import {getCalc} from '../store/actions/getCalc';
 import {destroyCalc} from '../store/actions/destroyCalc';
 import {Link} from "react-router-dom";
 
-class Comunals extends Component {
+class Calculators extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,7 +20,8 @@ class Comunals extends Component {
   }
 
   delete = (val) => {
-    this.props.destroyCalc(val);
+    console.log(val.id);
+    this.props.destroyCalc(val.id);
   }
 
   render() {
@@ -31,43 +32,31 @@ class Comunals extends Component {
     }
     // const calc = this.props.peopleData;
     const calculators = this.props.calculators;
-    const type = [];
-    const id = [];
-    calculators.map((value) => {
-      id.push(value.people_id);
-      type.push(value.type);
-      return (value);
-    })
-
-    // console.log(id)
-    console.log(calculators)
     return (
-      <Wrapper title="Comunals">
+      <Wrapper title="Calculators">
         <table>
           <tbody>
           <tr>
-            <td>ID</td>
-            <td>Name</td>
-            <td>Short name</td>
-            <td>Price</td>
-            <td>Unit</td>
-            <td></td>
-            <td></td>
+            <td>Type ID</td>
+            <td>People ID</td>
+            <td>Serial Number</td>
+            <td>Address</td>
+            <td colSpan="2"><b><Link to="/create-calc">Add</Link></b></td>
+
           </tr>
-          {type.map((val, id) => {
+          {calculators.map((val, id) => {
             return (
               <tr key={id}>
-                <td>{val.id}</td>
-                <td>{val.name}</td>
-                <td>{val.short_name}</td>
-                <td>{val.price}</td>
-                <td>{val.unit}</td>
+                <td>{val.type_id}</td>
+                <td>{val.people_id}</td>
+                <td>{val.serial_number}</td>
+                <td>{val.address}</td>
                 <td>
                   <Link to={`/edit/${val.id}`}>
                     Edit
                   </Link>
                 </td>
-                <td onClick={() => this.delete(val.id)}>Delete</td>
+                <td onClick={() => this.delete(val)}>Delete</td>
               </tr>
 
             )
@@ -102,6 +91,6 @@ const mapDispatchToProps = {
 const Container = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Comunals);
+)(Calculators);
 
 export default Container;
