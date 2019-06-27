@@ -37,6 +37,7 @@ class Calculators extends Component {
         <table>
           <tbody>
           <tr>
+            <td>ID</td>
             <td>Type ID</td>
             <td>People ID</td>
             <td>Serial Number</td>
@@ -47,12 +48,13 @@ class Calculators extends Component {
           {calculators.map((val, id) => {
             return (
               <tr key={id}>
+                <td>{val.id}</td>
                 <td>{val.type_id}</td>
                 <td>{val.people_id}</td>
                 <td>{val.serial_number}</td>
                 <td>{val.address}</td>
                 <td>
-                  <Link to={`/edit/${val.id}`}>
+                  <Link to={`/edit-calc/${val.id}`}>
                     Edit
                   </Link>
                 </td>

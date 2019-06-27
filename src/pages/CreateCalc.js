@@ -33,6 +33,7 @@ class CreateCalc extends Component {
     return (
       <Wrapper title="Create calculator">
         <form onSubmit={this.handleSubmit}>
+
           <TextField
             className="input-field"
             id="type_id"
@@ -69,8 +70,6 @@ class CreateCalc extends Component {
             onChange={this.handleChange}
           />
           {' '}
-          <br/>
-
           <div>
             <Button onClick={this.handleSubmit} variant="contained" color="primary">
               check in

@@ -10,6 +10,7 @@ import Registration from './pages/Registration';
 import Edit from './pages/Edit';
 import CreateCalc from './pages/CreateCalc';
 import Calculators from './pages/Calculators';
+import EditCalc from './pages/EditCalc';
 
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
           <Route path="/edit/:id" component={Edit}/>
           <Route path="/create-calc" component={CreateCalc}/>
           <Route path="/calculators" component={Calculators}/>
+          <Route path="/edit-calc/:id" component={EditCalc}/>
           <Route component={Admin}/>
         </Switch>
       </BrowserRouter>

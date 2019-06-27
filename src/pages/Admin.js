@@ -10,9 +10,9 @@ class Admin extends Component {
       <Wrapper title="Dashboard">
         <PieChart
           data={[
-            {title: 'One', value: 60, color: '#E38627'},
-            {title: 'Two', value: 30, color: '#C13C37'},
-            {title: 'Three', value: 10, color: '#6A2135'},
+            {title: 'One', value: 565, color: '#E38627'},
+            {title: 'Two', value: 305, color: '#C13C37'},
+            {title: 'Three', value: 1520, color: '#6A2135'},
           ]}
           style={
             {

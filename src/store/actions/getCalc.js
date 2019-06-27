@@ -12,3 +12,14 @@ export function getCalc(data) {
       },
   };
 }
+
+export const GET_CALC_BY_ID_REQUEST = 'GET_CALC_BY_ID_REQUEST';
+export const GET_CALC_BY_ID_SUCCESS = 'GET_CALC_BY_ID_SUCCESS';
+export const GET_CALC_BY_ID_FAIL = 'GET_CALC_BY_ID_FAIL';
+
+export function getCalcById(id) {
+  return {
+    type: GET_CALC_BY_ID_REQUEST,
+    payload: {id},
+  };
+}

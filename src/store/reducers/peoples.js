@@ -42,7 +42,6 @@ export default function reducer(state = initialState, action) {
     case GET_PEOPLE_BY_ID_REQUEST: {
       return {
         ...state,
-        peoples: [],
         people: {},
       };
     }
@@ -56,7 +55,6 @@ export default function reducer(state = initialState, action) {
     case GET_PEOPLE_BY_ID_FAIL: {
       return {
         ...state,
-        peoples: [],
         people: {},
       };
     }
