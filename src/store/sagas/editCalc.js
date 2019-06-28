@@ -10,11 +10,13 @@ import {
 function* editCalc(action) {
   try {
     const {data} = yield call(api.editCalc, action.payload.data);
+    console.log(data, 100000000000000)
     yield put({
       type: EDIT_CALC_SUCCESS,
       payload: {data},
     });
   } catch (e) {
+    console.warn(e)
     yield put({
       type: EDIT_CALC_FAIL,
       message: e.message,

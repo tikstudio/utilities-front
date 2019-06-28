@@ -1,16 +1,15 @@
 import React, {Component} from 'react';
-import Wrapper from '../components/Wrapper';
-import {connect} from 'react-redux';
-import {searchCalc} from '../store/actions/searchCalc';
-import {getCalc} from '../store/actions/getCalc';
-import {destroyCalc} from '../store/actions/destroyCalc';
 import {Link} from "react-router-dom";
+import {connect} from 'react-redux';
+import Wrapper from '../components/Wrapper';
+import {getCalc} from '../store/actions/getCalc';
+import {searchCalc} from '../store/actions/searchCalc';
+import {destroyCalc} from '../store/actions/destroyCalc';
 
 class Calculators extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      search: '',
       searchCalculator: '',
     };
   }
@@ -22,15 +21,13 @@ class Calculators extends Component {
   delete = (val) => {
     console.log(val.id);
     this.props.destroyCalc(val.id);
+    setTimeout(() => {
+        this.props.getCalc();
+      },
+      100);
   }
 
   render() {
-    const totalPage = this.props.totalPage;
-    const countPages = [];
-    for (let i = 1; i <= totalPage; i++) {
-      countPages.push(i)
-    }
-    // const calc = this.props.peopleData;
     const calculators = this.props.calculators;
     return (
       <Wrapper title="Calculators">
@@ -60,16 +57,8 @@ class Calculators extends Component {
                 </td>
                 <td onClick={() => this.delete(val)}>Delete</td>
               </tr>
-
             )
           })}
-
-          {/*{id.map((val,id) => {*/}
-          {/*  */}
-          {/*    */}
-          {/*}*/}
-          {/*)}*/}
-
           </tbody>
         </table>
       </Wrapper>
@@ -78,15 +67,14 @@ class Calculators extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  page: state.getCalc.page,
-  totalPage: state.getCalc.totalPage,
-  peopleData: state.searchCalc.peopleData,
+  // page: state.getCalc.page,
+  // totalPage: state.getCalc.totalPage,
   calculators: state.getCalc.calculators,
 });
 
 const mapDispatchToProps = {
-  searchCalc,
   getCalc,
+  searchCalc,
   destroyCalc,
 };
 

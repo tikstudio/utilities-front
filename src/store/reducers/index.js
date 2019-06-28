@@ -12,6 +12,7 @@ import regions from './regions';
 import getCalc from './getCalc';
 import destroyCalc from './destroyCalc';
 import createCalc from './createCalc';
+import editCalc from './editCalc';
 
 
 
@@ -29,4 +30,5 @@ export default combineReducers({
   getCalc,
   destroyCalc,
   createCalc,
+  editCalc,
 });

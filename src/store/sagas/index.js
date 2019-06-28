@@ -11,6 +11,7 @@ import regions from './regions';
 import getCalc from './getCalc';
 import destroyCalc from './destroyCalc';
 import createCalc from './createCalc';
+import editCalc from './editCalc';
 
 export default function* root() {
   const sagas = [
@@ -26,6 +27,7 @@ export default function* root() {
     getCalc,
     destroyCalc,
     createCalc,
+    editCalc,
   ];
   yield all(sagas.map(fork));
 }

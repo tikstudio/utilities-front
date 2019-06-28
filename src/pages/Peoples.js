@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {getPeoples} from '../store/actions/peoples';
 import {destroyPeoples} from '../store/actions/destroy';
-import {editPeople} from '../store/actions/edit';
 import {searchPeoples} from '../store/actions/searchPeople';
 
 
@@ -134,9 +133,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = {
   getPeoples,
-  destroyPeoples,
-  editPeople,
   searchPeoples,
+  destroyPeoples,
 };
 
 const Container = connect(

@@ -3,6 +3,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Wrapper from "../components/Wrapper";
 import {connect} from 'react-redux';
+import {Redirect} from 'react-router-dom'
 import {createCalc} from "../store/actions/createCalc";
 
 class CreateCalc extends Component {
@@ -13,6 +14,7 @@ class CreateCalc extends Component {
       serial_number: '',
       address: '',
       people_id: '',
+      redirect: false,
     };
   }
 
@@ -24,12 +26,16 @@ class CreateCalc extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
     this.props.createCalc(this.state);
-    console.log(this.state)
+    this.setState({
+      redirect: true,
+    })
   };
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect to='/calculators'/>
+    }
     return (
       <Wrapper title="Create calculator">
         <form onSubmit={this.handleSubmit}>

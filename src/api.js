@@ -86,13 +86,7 @@ export function createCalc(data) {
 }
 
 export function editCalc(data) {
-  return axios.post(`/calculators`, {
-    id: data.id,
-    type_id: data.type_id,
-    serial_number: data.serial_number,
-    address: data.address,
-    people_id: data.people_id,
-  });
+  return axios.post(`/calculators`, data);
 }
 export function searchCalc(search) {
   return axios.post(`/calculators/search?search=${search}`);

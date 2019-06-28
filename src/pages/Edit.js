@@ -5,7 +5,7 @@ import Wrapper from '../components/Wrapper';
 import {Redirect} from 'react-router-dom'
 import {connect} from 'react-redux';
 import {editPeople} from '../store/actions/edit';
-import {getPeopleById, getPeoples} from '../store/actions/peoples';
+import {getPeopleById} from '../store/actions/peoples';
 
 class Edit extends Component {
   constructor(props) {
@@ -30,7 +30,7 @@ class Edit extends Component {
 
   componentWillReceiveProps(nextProps) {
     const {id, name, l_name, m_name, address, passport, phone, region_id} = nextProps.people || {};
-    console.log(nextProps.people);
+    console.log(nextProps.people,54989654);
     if (!this.props.people.id && id) {
       this.setState(
         {id, name, l_name, m_name, address, passport, phone, region_id})
@@ -55,7 +55,7 @@ class Edit extends Component {
 
 
   render() {
-    console.log(this.state)
+    console.log(this.props)
     if (this.state.redirect) {
       return <Redirect to='/peoples'/>
     }
@@ -146,13 +146,11 @@ class Edit extends Component {
 }
 
 const mapStateToProps = state => ({
-  peoples: state.peoples.peoples,
   people: state.peoples.people,
   id: state.peoples.peoples.id,
 });
 const mapDispatchToProps = {
   editPeople,
-  getPeoples,
   getPeopleById,
 };
 

@@ -15,10 +15,12 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         calculator: {},
+        id:null,
       };
     }
     case EDIT_CALC_SUCCESS: {
-      const {calculator, id,} = action.payload.data;
+      const {calculator, id} = action.payload.data;
+      console.log(calculator, 99999992112)
       return {
         ...state,
         calculator,
@@ -29,6 +31,7 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         calculator: {},
+        id:null,
       };
     }
     default: {

@@ -3,8 +3,8 @@ export const EDIT_PEOPLE_SUCCESS = 'EDIT_PEOPLE_SUCCESS';
 export const EDIT_PEOPLE_FAIL = 'EDIT_PEOPLE_FAIL';
 
 
-export function editPeople(data, id) {
+export function editPeople(data) {
   return {
-    type: EDIT_PEOPLE_REQUEST, payload: {data, id},
+    type: EDIT_PEOPLE_REQUEST, payload: {data},
   };
 }

@@ -23,15 +23,16 @@ class EditCalc extends Component {
   componentDidMount() {
     const {id} = this.props.match.params;
     this.props.getCalcById(id);
+    this.props.editCalc();
   }
 
   componentWillReceiveProps(nextProps) {
     const {id, type_id, serial_number, address, people_id} = nextProps.calculator || {};
-    console.log(nextProps.calculator, 11111111111);
+    console.log(nextProps.calculator, 546514684684);
     if (!this.props.calculator.id && id) {
       this.setState(
-        {id, type_id, serial_number, address, people_id})
-      ;
+        {id, type_id, serial_number, address, people_id}
+        );
     }
   }
 
@@ -44,9 +45,9 @@ class EditCalc extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.editCalc(this.state);
-    // this.setState({
-    //   redirect: true,
-    // })
+    this.setState({
+      redirect: true,
+    })
     // regex:"[A-Z]+\d{7}"
   }
 
@@ -57,7 +58,7 @@ class EditCalc extends Component {
       return <Redirect to='/calculators'/>
     }
     return (
-      <Wrapper title="Edit people">
+      <Wrapper title="Edit calculator">
         <form onSubmit={this.handleSubmit}>
           <TextField
             type="hidden"
@@ -108,7 +109,7 @@ class EditCalc extends Component {
           {' '}
           <div>
             <Button onClick={this.handleSubmit} variant="contained" color="primary">
-              check in
+              Edit
             </Button>
           </div>
         </form>
@@ -118,8 +119,8 @@ class EditCalc extends Component {
 }
 
 const mapStateToProps = state => ({
-  calculator: state.calculator,
-  id: state.id,
+  calculator: state.getCalc.calculator,
+  id: state.editCalc.id,
 });
 const mapDispatchToProps = {
   editCalc,
