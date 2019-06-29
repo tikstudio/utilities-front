@@ -47,13 +47,7 @@ class Peoples extends Component {
 
   render() {
     const people = this.props.peoples;
-    const totalPage = this.props.totalPage;
-    const countPages = [];
-    for (let i = 1; i <= totalPage; i++) {
-      countPages.push(i)
-    }
     const filterPeople = this.props.people;
-
 
     return (
       <Wrapper title="Peoples">
@@ -115,7 +109,6 @@ class Peoples extends Component {
                   <td onClick={() => this.delete(values)}>Delete</td>
                 </tr>
               );
-
             })}
           </tbody>
         </table>

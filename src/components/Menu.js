@@ -19,9 +19,6 @@ class Menu extends Component {
           <Link to="/calculators" className="list-group-item list-group-item-action waves-effect">
             <i className="fas fa-table mr-3">Calculators</i>
           </Link>
-          <Link to="/comunals" className="list-group-item list-group-item-action waves-effect">
-            <i className="fas fa-table mr-3">Comunals</i>
-          </Link>
         </div>
       </div>
 

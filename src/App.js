@@ -5,7 +5,6 @@ import Admin from './pages/Admin';
 import Manager from './pages/Manager';
 import LogOut from './pages/LogOut';
 import Peoples from './pages/Peoples';
-import Comunals from './pages/Comunals';
 import Registration from './pages/Registration';
 import Edit from './pages/Edit';
 import CreateCalc from './pages/CreateCalc';
@@ -22,7 +21,6 @@ class App extends Component {
           <Route path="/log-out" component={LogOut}/>
           <Route path="/manager" component={Manager}/>
           <Route path="/peoples" component={Peoples}/>
-          <Route path="/comunals" component={Comunals}/>
           <Route path="/registration" component={Registration}/>
           <Route path="/edit/:id" component={Edit}/>
           <Route path="/create-calc" component={CreateCalc}/>
